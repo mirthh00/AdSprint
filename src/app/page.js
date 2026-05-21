@@ -98,6 +98,7 @@ export default function Home() {
   const navLinks = [
     { label: 'How It Works', id: 'how-it-works' },
     { label: 'Our Work', id: 'our-work' },
+    { label: 'Our Team', id: 'our-team' },
     { label: 'Guarantees', id: 'guarantees' },
     { label: 'Pricing', id: 'pricing' },
     { label: 'FAQ', id: 'faq' },
@@ -112,9 +113,9 @@ export default function Home() {
   ]
 
   const plans = [
-    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '1,100', period: 'One-time', features: ['1 custom motion ad', 'Clean, modern design', 'Fast delivery (48h)', '1 revision included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
-    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '3,000', period: 'Monthly', features: ['3–5 high-converting motion ads', 'Multiple styles & variations', 'Messaging guidance', 'Optimised for social & ads', 'Fast turnaround', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
-    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '6,000+', period: 'Monthly', features: ['High-volume ad creation', 'Multiple variations for testing', 'Advanced messaging direction', 'Faster delivery timelines', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
+    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos', 'Sound effects', 'Voice overs', 'Clean, modern design','Simple animations' ,'Fast delivery (48h)', '4 revision included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
+    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads','4 custom motion explainer videos', '4 FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited variations', 'Messaging guidance', 'Optimised for social & ads','Google/Social ads setup', 'Strategy & Direction', 'Fast turnaround', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
+    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth', 'Multiple variations for testing', 'Advanced messaging direction', 'Faster delivery timelines', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
   ]
 
 const guarantees = [
@@ -228,17 +229,17 @@ useEffect(() => {
                   High-Converting Motion Ads
                 </div>
                 <h1 className="hero-title reveal reveal-delay-1">
-                  Turn attention<br />into <em>customers.</em>
+                  Don’t just run ads.<br /><em>Build presence.</em>
                 </h1>
                 <p className="hero-subtitle reveal reveal-delay-2">
-                  We craft high-converting motion ads that help businesses attract, engage, and convert — beautifully.
+                  We craft monthly high-converting motion ads that help businesses attract attention, build trust, and convert beautifully.
                 </p>
                 <div className="hero-cta reveal reveal-delay-3">
                   <a href="#pricing" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 28px' }} onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
                     Get Started <Arrow />
                   </a>
-                  <button className="btn-ghost" style={{ fontSize: '1rem', padding: '14px 24px' }} onClick={() => scrollTo('how-it-works')}>
-                    ▶ See How It Works
+                  <button className="btn-ghost" style={{ fontSize: '1rem', padding: '14px 24px' }} onClick={() => scrollTo('guarantees')}>
+                    See Our Guarantees
                   </button>
                 </div>
                 <div className="hero-trust reveal reveal-delay-4">
@@ -259,7 +260,7 @@ useEffect(() => {
   ))}
 </div>
                   <p className="hero-trust-text">
-                    Trusted by <strong>200+ businesses</strong><br />to grow and scale
+                    Trusted by <strong>20+ businesses</strong><br />to grow and scale
                   </p>
                 </div>
               </div>
@@ -466,7 +467,7 @@ useEffect(() => {
         {/* ════════════════════════════════════════
             TEAM BANNER
         ════════════════════════════════════════ */}
-        <section className="team-section">
+        <section id="our-team" className="team-section">
           <div className="team-photo-wrap">
             <img
               src="/images/team.jpg"
@@ -514,13 +515,13 @@ useEffect(() => {
 
                 <div className="ceo-bio">
                   <p>
-                    John Doe is a Computer Science graduate from the University of the Witwatersrand (Wits), Johannesburg. His background in systems thinking and data gave him an edge most creatives don't have — he builds ads that don't just look good, they perform with measurable precision.
+                    Nhlamulo Mabunda is a Computer Science graduate from the University of the Witwatersrand (Wits), Johannesburg. His background in systems thinking and data gave him an edge most creatives don't have — he builds ads that don't just look good, they perform with measurable precision.
                   </p>
                   <p>
                     His vision is straightforward: every business deserves world-class creative, not just those who can afford agency retainers. AdSprint was built to close that gap — combining elite-level production with transparent pricing and direct founder access from day one.
                   </p>
                   <p>
-                    John personally leads the strategy call with every new client within 20 minutes of sign-up. Because he believes the difference between an ad that converts and one that doesn't often comes down to one conversation at the right time.
+                    Nhlamulo personally leads the strategy call with every new client within 20 minutes of sign-up. Because he believes the difference between an ad that converts and one that doesn't often comes down to one conversation at the right time.
                   </p>
                 </div>
 
@@ -540,8 +541,8 @@ useEffect(() => {
                     <img src="/images/ceo.jpg" alt="John Doe" />
                   </div>
                   <div className="ceo-sign-text">
-                    <strong>John Doe</strong>
-                    <span>Founder & CEO, AdSprint — Johannesburg</span>
+                    <strong>Nhlamulo</strong>
+                    <span>Founder & CEO, AdSprint (By CodeSprint under Mirthh (Pty) Ltd) — Johannesburg</span>
                   </div>
                 </div>
               </div>
