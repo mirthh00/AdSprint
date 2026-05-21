@@ -28,17 +28,26 @@ export async function POST(req) {
     
 
     // Create user
-    const user = await prisma.user.create({
-      data: {
-        firstName,
-        lastName,
-        email,
-        phone,
-        company: company || null,
-        plan,
-        status: "pending",
-      },
-    })
+  const user = await prisma.user.upsert({
+  where: { email },
+  update: {
+    firstName,
+    lastName,
+    phone,
+    company,
+    plan,
+    status: "Pending",
+  },
+  create: {
+    firstName,
+    lastName,
+    email,
+    phone,
+    company,
+    plan,
+    status: "Pending",
+  },
+})
 
     // Plan pricing
     const pricing = {
