@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import {Suspense, useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -67,7 +67,7 @@ const PLANS = [
   },
 ]
 
-export default function Checkout() {
+function CheckoutContent() {
   /* ── Get plan from URL param ── */
   const searchParams = useSearchParams()
 
@@ -522,5 +522,13 @@ const handleSubmit = async (e) => {
       {/* Spinner keyframe */}
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
     </div>
+  )
+}
+
+export default function Checkout() {
+  return (
+    <Suspense fallback={<div />}>
+      <CheckoutContent />
+    </Suspense>
   )
 }

@@ -4,8 +4,9 @@
 import Link from 'next/link'
 import { CheckCircle2, Mail, ReceiptText, Video, ArrowLeft } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
+import {Suspense } from 'react'
 
-export default function PaymentSuccessPage() {
+function PaymentSuccessPageContent() {
     const searchParams = useSearchParams()
 const name = searchParams.get('name')
   return (
@@ -271,5 +272,13 @@ const name = searchParams.get('name')
 
       </div>
     </div>
+  )
+}
+
+export default function PaymentSuccessPage() {
+  return (
+    <Suspense fallback={<div />}>
+      <PaymentSuccessPageContent />
+    </Suspense>
   )
 }

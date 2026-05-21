@@ -4,8 +4,9 @@
 import Link from 'next/link'
 import { XCircle, RefreshCcw, ArrowLeft } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
+import {Suspense } from 'react'
 
-export default function PaymentFailPage() {
+function PaymentFailPageContent() {
     const searchParams = useSearchParams()
 const name = searchParams.get('name')
   return (
@@ -147,5 +148,13 @@ const name = searchParams.get('name')
         </div>
       </div>
     </div>
+  )
+}
+
+export default function PaymentFailPage() {
+  return (
+    <Suspense fallback={<div />}>
+      <PaymentFailPageContent />
+    </Suspense>
   )
 }
