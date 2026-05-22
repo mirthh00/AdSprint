@@ -113,9 +113,9 @@ export default function Home() {
   ]
 
   const plans = [
-    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos', 'Sound effects', 'Voice overs','Simple animations' ,'Fast delivery (48h)', '4 revision included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
-    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads, explainer videos & FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited revisions','Google/Social Ads Setup - designed to reduce wasted spend.', 'Performance optimisation', 'Fast delivery (24h)', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
-    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth','Complex 2D & 3D animations' ,'Multiple variations for testing', 'Advanced messaging direction', 'Google/Social ads management', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
+    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos', 'Sound effects', 'Voice overs','Simple animations' ,'Fast delivery (48h)', '4 revisions included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
+    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads, explainer videos & FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited revisions','Google / Social Ads setup - designed to reduce wasted spend', 'Performance optimisation', 'Fast delivery (24h)', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
+    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth','Complex 2D & 3D animations' ,'Multiple variations for testing', 'Advanced messaging direction', 'Google / Social Ads management', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
   ]
 
 const guarantees = [
