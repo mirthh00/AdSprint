@@ -113,9 +113,9 @@ export default function Home() {
   ]
 
   const plans = [
-    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos', 'Sound effects', 'Voice overs', 'Clean, modern design','Simple animations' ,'Fast delivery (48h)', '4 revision included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
-    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads','4 custom motion explainer videos', '4 FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited variations', 'Messaging guidance', 'Optimised for social & ads','Google/Social ads setup', 'Strategy & Direction', 'Fast turnaround', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
-    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth', 'Multiple variations for testing', 'Advanced messaging direction', 'Faster delivery timelines', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
+    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos', 'Sound effects', 'Voice overs','Simple animations' ,'Fast delivery (48h)', '4 revision included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
+    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads, explainer videos & FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited revisions','Google/Social ads setup', 'Performance optimisation', 'Fast delivery (24h)', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
+    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth','Complex 2D & 3D animations' ,'Multiple variations for testing', 'Advanced messaging direction', 'Google/Social ads management', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
   ]
 
 const guarantees = [
@@ -141,13 +141,52 @@ const guarantees = [
   },
 ]
 
-  const faqs = [
-    { q: 'How long does it take to deliver?', a: 'Starter ads are delivered within 48 hours. Growth and Scale plans have faster turnarounds with dedicated pipeline priority.' },
-    { q: 'What platforms are the ads optimised for?', a: 'We create ads optimised for Meta, TikTok, Instagram, YouTube, and Google — across all placements and aspect ratios.' },
-    { q: 'Can you help with the script?', a: 'Absolutely. All Growth and Scale plans include messaging guidance and script direction as part of the package.' },
-    { q: 'Do you offer revisions?', a: 'Starter includes 1 revision. Growth and Scale plans include unlimited revisions within the billing cycle.' },
-    { q: 'How quickly do I hear from you after signing up?', a: 'Within 20 minutes of payment you will receive a Microsoft Teams invite from our CEO to discuss your strategy, goals, and creative direction personally.' },
-  ]
+ const faqs = [
+  // ── Getting Started ──
+  { q: 'How long does it take to deliver?', a: 'All plans operate on a rolling monthly production schedule — typically 5–7 business days per batch — with dedicated pipeline priority. The first batch takes 2 days in Starter and just a day in Growth & Scale.' },
+  { q: 'What platforms are the ads optimised for?', a: 'We create ads optimised for Meta (Facebook & Instagram), TikTok, YouTube, Google Display & YouTube Ads, and X (Twitter) — across all placements, aspect ratios (9:16, 1:1, 16:9), and file format requirements for each platform.' },
+  { q: 'Can you help with the script?', a: 'Absolutely. All Growth and Scale plans include full messaging guidance and script direction. We help you identify your hook, core value proposition, and call-to-action before a single frame is produced. Starter clients receive basic creative direction during the strategy call.' },
+  { q: 'Do you offer revisions?', a: 'Starter includes 4 revision rounds. Growth and Scale plans include unlimited revisions within the billing cycle. We work until the creative genuinely reflects your brief — that\'s a promise.' },
+  { q: 'How quickly do I hear from you after signing up?', a: 'Within 20 minutes of payment you will receive a Microsoft Teams invite directly from our CEO, John Doe, to discuss your strategy, goals, audience, and creative direction personally. If you sign up outside business hours (Mon–Fri, 08:00–18:00 SAST), your invite will arrive first thing the next business morning.' },
+
+  // ── About AdSprint ──
+  { q: 'Who actually makes my ads?', a: 'Your ads are produced by our in-house creative team, led and overseen personally by Nhlamulo Mabunda (Founder & CEO). We do not outsource to freelancers or third-party agencies. Every deliverable goes through our internal quality review before it reaches you.' },
+  { q: 'Where is AdSprint based?', a: 'We are based in Johannesburg, South Africa. We serve clients across South Africa and internationally. All pricing is in South African Rand (ZAR) and our business hours are Mon–Fri, 08:00–18:00 SAST.' },
+  { q: 'How experienced is the team?', a: 'Our CEO holds a BSc in Computer Science from the University of the Witwatersrand (Wits) and has personally overseen ads for 20+ businesses across a range of industries. Our creative team specialises exclusively in performance-driven motion content for digital advertising.' },
+  { q: 'Do you work with businesses outside South Africa?', a: 'Yes. While we are based in Johannesburg, we work with clients globally. Deliverables are shared digitally and strategy calls are held via Microsoft Teams, making geography a non-issue. Invoicing and payment are processed in ZAR via PayFast.' },
+
+  // ── Pricing & Payment ──
+  { q: 'Is there a setup fee or hidden cost?', a: 'None whatsoever. The price you see is the price you pay. No onboarding fees, no licensing fees, no surprise charges. Third-party assets (like licensed stock music or footage) will always be flagged and approved by you before use — we will never add costs without your explicit sign-off.' },
+  { q: 'Can I upgrade or downgrade my plan?', a: 'Yes. You can upgrade or downgrade your monthly plan at any time by emailing us. Upgrades take effect immediately. Downgrades take effect at the start of the next billing cycle. We will always make the transition as smooth as possible.' },
+  { q: 'What payment methods do you accept?', a: 'We accept all major payment methods available through PayFast, including credit and debit cards (Visa, Mastercard), Instant EFT, Mobicred, and more. All transactions are secured with 256-bit SSL encryption. We do not store any of your payment details.' },
+  { q: 'Do you offer a discount for annual payment?', a: 'We do not currently list annual pricing publicly, but we are open to custom arrangements for clients who want to commit to a full year. Reach out to us at hello@adsprint.co.za and we will put something together for you.' },
+
+  // ── The Process ──
+  { q: 'What happens after I pay?', a: 'Within 20 minutes you will receive a Microsoft Teams invite from our CEO. On the call we discuss your brand, target audience, creative direction, ad goals, and any reference material you have. After the call, our team begins production. You will receive your first draft within the timeline of your chosen plan.' },
+  { q: 'What do I need to provide?', a: 'Ideally: your logo and brand colours, any existing brand guidelines, product or service images/footage if applicable, and a brief description of your target audience and campaign goal. Do not worry if you do not have everything — that is exactly what the strategy call is for. We help you figure it out.' },
+  { q: 'What if I do not have a brief or clear idea of what I want?', a: 'That is completely fine. Our CEO strategy call is specifically designed to extract your goals, audience insights, and value proposition even if you are starting from zero. Many of our best-performing ads have come from clients who came to us with just a product and a vision.' },
+  { q: 'How do you share the final files?', a: 'Final deliverables are shared via a secure download link or a shared cloud folder (Google Drive or similar), in whatever format suits your needs — MP4, MOV, or platform-specific export settings. We will always confirm the correct format and resolution for your intended platform before exporting.' },
+
+  // ── Quality & Results ──
+  { q: 'What if my ad does not perform well after launch?', a: 'If your ad underperforms against mutually agreed benchmarks after launch, we will strategically rebuild it at no additional cost. You will need to provide the analytics data showing the underperformance and we will get to work on a revised version with a fresh strategy.' },
+  { q: 'Do you guarantee results or ROAS?', a: 'We guarantee the quality and strategic integrity of every creative we produce. While no ethical agency can guarantee specific ROAS figures (ad performance is also affected by your targeting, budget, offer, and landing page), we back our work with a full rebuild guarantee if it underperforms and a refund guarantee if you are not satisfied after revisions.' },
+  { q: 'What makes your ads different from what I can make myself or with AI tools?', a: 'Our ads are built around performance psychology — hooks engineered for the first 1.5 seconds, messaging structured around your specific audience\'s objections, and motion design that competes with the best content on each platform. AI tools produce generic output. We produce strategic creative built on a real conversation about your business.' },
+
+  // ── Ownership & Confidentiality ──
+  { q: 'Who owns the ads once they are delivered?', a: 'You do. Upon full payment, copyright and all intellectual property rights in the final delivered creative are fully assigned to you. There are no ongoing licence fees, no usage restrictions, and no strings attached.' },
+  { q: 'Will AdSprint share or post my ads without my permission?', a: 'Never. We default to complete confidentiality. Your ads, strategy, results, and brand details will not be shared publicly or used in our marketing without your explicit written consent. We understand that a high-performing ad is a competitive advantage — and we protect it as such.' },
+  { q: 'Is my business strategy kept confidential?', a: 'Absolutely. Everything discussed in your strategy call and all information you share with us is treated as strictly confidential. We do not share client strategies, briefs, or results with any third party, including other clients or partner agencies.' },
+
+  // ── Refunds & Cancellations ──
+  { q: 'What is your refund policy?', a: 'If delivered work does not match your agreed brief, we fix it free. If you are still not satisfied after revisions, you are entitled to a full refund for that deliverable, requested within 14 days of delivery. We process refunds within 7 business days via your original payment method.' },
+  { q: 'Can I cancel my monthly plan?', a: 'Yes, at any time with 30 days\' written notice via email. Your plan remains active through the end of the billing cycle following the notice period. There are no cancellation penalties, no lock-in clauses, and no awkward conversations. We would rather you leave on good terms than stay unhappy.' },
+  { q: 'What happens to my files if I cancel?', a: 'All creative deliverables you have paid for and received are yours to keep permanently. Cancellation does not affect your ownership of completed work. Any in-progress work at the time of cancellation will be completed, paused, or refunded pro-rata at your discretion.' },
+
+  // ── Communication & Support ──
+  { q: 'How do I contact AdSprint after I sign up?', a: 'Active clients communicate with us primarily via calls (0633217882) and Microsoft Teams. Growth and Scale clients also have access to priority support with faster response times. We aim to respond to all queries within 1 business day.' },
+  { q: 'What are your business hours?', a: 'Our team is available Monday to Friday, 08:00–18:00 SAST. We monitor emails outside these hours for urgent matters but all formal responses and deliveries are processed within business hours.' },
+  { q: 'Do I get a dedicated account manager?', a: 'Growth and Scale clients are managed directly by our senior team with consistent points of contact throughout your engagement. Starter clients are guided through the process from the initial CEO call through to delivery.' },
+]
 
   const logoIcon = (name) => ({ Meta: '∞', Instagram: '◻', TikTok: '♪', YouTube: '▶', Google: 'G', 'X / Twitter': '✕', LinkedIn: 'in', Pinterest: '⊕' }[name] || '•')
 const pricingRef = useRef(null)
@@ -174,7 +213,20 @@ useEffect(() => {
       <nav className="navbar">
         <a href="#" className="nav-logo" onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>
           <div className="nav-logo-dot" />
-          AdSprint
+         <div>
+      AdSprint
+      <div style={{
+        fontSize: '0.52rem',
+        fontFamily: "'JetBrains Mono', monospace",
+        fontWeight: 400,
+        color: 'var(--text-tertiary)',
+        letterSpacing: '0.04em',
+        marginTop: '1px',
+        lineHeight: 1,
+      }}>
+        By CodeSprint under Mirthh (Pty) Ltd
+      </div>
+    </div>
         </a>
 
         <ul className="nav-links">
@@ -496,11 +548,11 @@ useEffect(() => {
                 <div className="ceo-photo-frame">
                   <img
                     src="/images/ceo.jpg"
-                    alt="John Doe — Founder & CEO of AdSprint"
+                    alt="Nhlamulo Mabunda"
                   />
                   <div className="ceo-name-card">
-                    <div className="ceo-name-main">John Doe</div>
-                    <div className="ceo-name-role">Founder & CEO · AdSprint</div>
+                    <div className="ceo-name-main">Nhlamulo Mabunda</div>
+                    <div className="ceo-name-role">Founder & CEO, AdSprint (By CodeSprint under Mirthh (Pty) Ltd) — Johannesburg</div>
                   </div>
                 </div>
               </div>
@@ -526,7 +578,7 @@ useEffect(() => {
                 </div>
 
                 <div className="ceo-credentials">
-                  {['BSc Computer Science — Wits', 'Founder & CEO', '200+ Brands Scaled', 'Based in Johannesburg, SA', 'Motion & Performance Ads'].map((pill) => (
+                  {['BSc Computer Science — Wits', 'Founder & CEO', '20+ Brands Scaled', 'Based in Johannesburg, SA', 'Motion & Performance Ads'].map((pill) => (
                     <span key={pill} className="cred-pill">
                       <span style={{ fontSize: '0.7rem' }}>◆</span>
                       {pill}
@@ -538,10 +590,10 @@ useEffect(() => {
 
                 <div className="ceo-sign-row">
                   <div className="ceo-sign-avatar">
-                    <img src="/images/ceo.jpg" alt="John Doe" />
+                    <img src="/images/ceo.jpg" alt="Nhlamulo Mabunda" />
                   </div>
                   <div className="ceo-sign-text">
-                    <strong>Nhlamulo</strong>
+                    <strong>Nhlamulo Mabunda</strong>
                     <span>Founder & CEO, AdSprint (By CodeSprint under Mirthh (Pty) Ltd) — Johannesburg</span>
                   </div>
                 </div>
@@ -700,39 +752,41 @@ useEffect(() => {
         {/* ════════════════════════════════════════
             FAQ
         ════════════════════════════════════════ */}
-        <section id="faq" className="section" style={{ paddingTop: 0 }}>
-          <div className="container" style={{ maxWidth: 720 }}>
-            <div className="section-header" style={{ textAlign: 'center' }}>
-              <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
-              <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>Questions answered</h2>
-            </div>
+    <section id="faq" className="section" style={{ paddingTop: 0 }}>
+  <div className="container" style={{ maxWidth: 720 }}>
+    <div className="section-header" style={{ textAlign: 'center' }}>
+      <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
+      <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>Questions answered</h2>
+    </div>
+  </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {faqs.map((faq, i) => (
-                <div
-                  key={i}
-                  className={`feature-card reveal reveal-delay-${i % 3 + 1}`}
-                  style={{ cursor: 'pointer', padding: '24px 28px' }}
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-                    <h3 style={{ fontSize: '1rem', fontFamily: 'Outfit,sans-serif', fontWeight: 500, letterSpacing: 0, margin: 0 }}>
-                      {faq.q}
-                    </h3>
-                    <span style={{ color: 'var(--green)', fontSize: '1.2rem', transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s', flexShrink: 0 }}>
-                      +
-                    </span>
-                  </div>
-                  {openFaq === i && (
-                    <p style={{ marginTop: '16px', marginBottom: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65, animation: 'slideDown 0.25s ease' }}>
-                      {faq.a}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+  <div style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '0 16px', boxSizing: 'border-box' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      {faqs.map((faq, i) => (
+        <div
+          key={i}
+          className={`feature-card reveal reveal-delay-${i % 3 + 1}`}
+          style={{ cursor: 'pointer', padding: '24px 28px' }}
+          onClick={() => setOpenFaq(openFaq === i ? null : i)}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
+            <h3 style={{ fontSize: '1rem', fontFamily: 'Outfit,sans-serif', fontWeight: 500, letterSpacing: 0, margin: 0 }}>
+              {faq.q}
+            </h3>
+            <span style={{ color: 'var(--green)', fontSize: '1.2rem', transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s', flexShrink: 0 }}>
+              +
+            </span>
           </div>
-        </section>
+          {openFaq === i && (
+            <p style={{ marginTop: '16px', marginBottom: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65, animation: 'slideDown 0.25s ease' }}>
+              {faq.a}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* ════════════════════════════════════════
             CTA
