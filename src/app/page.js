@@ -429,14 +429,7 @@ useEffect(() => {
                 <p>
                   With strategy locked in, our team gets to work. Your ads are produced, refined, and delivered on the schedule your plan promises — ready to launch across Meta, TikTok, YouTube, and beyond.
                 </p>
-                <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  {['Starter: 1 ad, 48h delivery', 'Growth: 3–5 ads, monthly cadence', 'Scale: High-volume, ongoing flow'].map((item, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.825rem', color: 'var(--text-secondary)', fontWeight: 300 }}>
-                      <span style={{ width: 20, height: 20, borderRadius: '50%', background: 'var(--green-subtle)', border: '1px solid rgba(0,232,122,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.55rem', color: 'var(--green)', flexShrink: 0 }}>✓</span>
-                      {item}
-                    </div>
-                  ))}
-                </div>
+              
               </div>
             </div>
           </div>
@@ -752,15 +745,21 @@ useEffect(() => {
         {/* ════════════════════════════════════════
             FAQ
         ════════════════════════════════════════ */}
-    <section id="faq" className="section" style={{ paddingTop: 0 }}>
-  <div className="container" style={{ maxWidth: 800 }}>
+<section id="faq" className="section" style={{ paddingTop: 0 }}>
+  <div className="container" style={{ maxWidth: 720 }}>
     <div className="section-header" style={{ textAlign: 'center' }}>
       <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
       <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>Questions answered</h2>
     </div>
   </div>
 
-  <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', padding: '0 16px', boxSizing: 'border-box' }}>
+  <div style={{
+    width: '100%',
+    maxWidth: 720,
+    margin: '0 auto',
+    padding: '0 clamp(16px, 5vw, 24px)',
+    boxSizing: 'border-box',
+  }}>
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
       {faqs.map((faq, i) => (
         <div
@@ -807,9 +806,8 @@ useEffect(() => {
               </p>
             </div>
             <div className="footer-links">
-              <a href="#">Privacy</a>
-              <a href="#">Terms</a>
-              <a href="#" onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>Contact</a>
+              <a href="/privacypolicy">Privacy</a>
+              <a href="/termsofservice">Terms</a>
             </div>
           </div>
         </div>
