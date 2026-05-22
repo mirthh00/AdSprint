@@ -667,6 +667,8 @@ footer{padding:48px 0;border-top:1px solid var(--border)}
   display: none;
 }
 
+#faq .container { max-width: 100% !important; }
+
 }
 
 
