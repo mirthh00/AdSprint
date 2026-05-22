@@ -67,7 +67,7 @@ const PLANS = [
       'Sound effects',
       'Voice overs',
       'Unlimited revisions',
-      'Google / Social ads setup',
+      'Google / Social ads setup - designed to reduce wasted spend',
       'Performance optimisation',
       'Fast delivery (24h)',
       'Priority support',
@@ -447,9 +447,9 @@ const handleSubmit = async (e) => {
               {/* Fine print */}
               <p style={{ textAlign: 'center', fontSize: '0.72rem', color: 'var(--text-tertiary)', fontWeight: 300, lineHeight: 1.6, marginTop: '16px' }}>
                 By proceeding you agree to our{' '}
-                <a href="#" style={{ color: 'var(--green)', textDecoration: 'none' }}>Terms of Service</a>
+                <a href="/termsofservice" style={{ color: 'var(--green)', textDecoration: 'none' }}>Terms of Service</a>
                 {' '}and{' '}
-                <a href="#" style={{ color: 'var(--green)', textDecoration: 'none' }}>Privacy Policy</a>.
+                <a href="/privacypolicy" style={{ color: 'var(--green)', textDecoration: 'none' }}>Privacy Policy</a>.
                 {' '}We never store your payment details.
               </p>
             </div>
@@ -495,7 +495,7 @@ const handleSubmit = async (e) => {
             <div className="teams-body">
               <strong>Strategy Call With Our CEO</strong>
               <p>
-                Immediately after payment, John Doe (Founder & CEO) will personally send you a Microsoft Teams invite to align on your brand, audience, and creative direction.
+                Immediately after payment, Nhlamulo Mabunda (Founder & CEO) will personally send you a Microsoft Teams invite to align on your brand, audience, and creative direction.
               </p>
               <div className="teams-timer">
                 Expect your invite within 20 minutes
