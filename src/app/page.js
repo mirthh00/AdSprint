@@ -753,14 +753,14 @@ useEffect(() => {
             FAQ
         ════════════════════════════════════════ */}
     <section id="faq" className="section" style={{ paddingTop: 0 }}>
-  <div className="container" style={{ maxWidth: 720 }}>
+  <div className="container" style={{ maxWidth: 800 }}>
     <div className="section-header" style={{ textAlign: 'center' }}>
       <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
       <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>Questions answered</h2>
     </div>
   </div>
 
-  <div style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '0 16px', boxSizing: 'border-box' }}>
+  <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', padding: '0 16px', boxSizing: 'border-box' }}>
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
       {faqs.map((faq, i) => (
         <div
