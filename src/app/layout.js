@@ -1,4 +1,5 @@
 import './globals.css'
+import Script from "next/script";
 
 export const metadata = {
   title: 'AdSprint — Turn Attention Into Customers',
@@ -15,6 +16,20 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         {children}
       </body>
+       <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-10978293447"
+      />
+
+      <Script id="google-ads">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-10978293447');
+        `}
+      </Script>
     </html>
   )
 }
