@@ -283,9 +283,6 @@ useEffect(() => {
             <div className="hero-inner">
               <div>
                 <div className="hero-badge reveal">
-                  <div className="hero-badge-dot" />
-                  High-Converting Motion Ads
-                </div>
                 <h1 className="hero-title reveal reveal-delay-1">
                   Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
                 </h1>
