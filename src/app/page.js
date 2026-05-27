@@ -287,10 +287,10 @@ useEffect(() => {
                   High-Converting Motion Ads
                 </div>
                 <h1 className="hero-title reveal reveal-delay-1">
-                  Motion Ads From R6000/Month.<br />With<em>Free Google Ads Setup.</em>
+                  Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
                 </h1>
                 <p className="hero-subtitle reveal reveal-delay-2">
-                  We help businesses stay visible, trusted, and impossible to ignore with high-converting monthly motion content designed to attract attention, build customer confidence, and drive real growth - including free Google Ads management and a full hassle-free refund guarantee for complete peace of mind.
+                  We help businesses stay visible and impossible to ignore with high-converting monthly motion content - including free Google Ads management and a full hassle-free refund guarantee.
                 </p>
                 <div className="hero-cta reveal reveal-delay-3">
                   <a href="#pricing" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 28px' }} onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
