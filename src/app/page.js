@@ -113,12 +113,17 @@ export default function Home() {
   ]
 
   const plans = [
-    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos', 'Sound effects', 'Voice overs','Simple animations' ,'Fast delivery (48h)', '4 revisions included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
-    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads, explainer videos & FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited revisions','Google / Social Ads setup - designed to reduce wasted spend', 'Performance optimisation', 'Fast delivery (24h)', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
-    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth','Complex 2D & 3D animations' ,'Multiple variations for testing', 'Advanced messaging direction', 'Google / Social Ads management', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
+    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos','Google / Social Ads setup - designed to reduce wasted spend', 'Sound effects', 'Voice overs','Simple animations' ,'Fast delivery (48h)', '4 revisions included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
+    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads, explainer videos & FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited revisions','Google / Social Ads management - designed to reduce wasted spend', 'Performance optimisation', 'Fast delivery (24h)', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
+    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth','Complex 2D & 3D animations' ,'Multiple variations for testing', 'Advanced messaging direction', 'Google / Social Ads management - designed to reduce wasted spend', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
   ]
 
 const guarantees = [
+  {
+  icon: LineChart,
+  title: "Free Google Ads Management Included",
+  desc: "Every package includes free Google Ads setup and management designed to reduce wasted ad spend, improve targeting, and maximize your return on ad spend (ROAS)."
+},
   {
     icon: ShieldCheck,
     title: "If it doesn't match — we fix it free",
@@ -281,10 +286,10 @@ useEffect(() => {
                   High-Converting Motion Ads
                 </div>
                 <h1 className="hero-title reveal reveal-delay-1">
-                  Don’t just run ads.<br /><em>Build presence.</em>
+                  Motion Ads From R6000/Month.<br />With<em>Free Google Ads Setup.</em>
                 </h1>
                 <p className="hero-subtitle reveal reveal-delay-2">
-                  We craft monthly high-converting motion ads that help businesses attract attention, build trust, and convert beautifully.
+                  We help businesses stay visible, trusted, and impossible to ignore with high-converting monthly motion content designed to attract attention, build customer confidence, and drive real growth - including free Google Ads management and a full hassle-free refund guarantee for complete peace of mind.
                 </p>
                 <div className="hero-cta reveal reveal-delay-3">
                   <a href="#pricing" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 28px' }} onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
