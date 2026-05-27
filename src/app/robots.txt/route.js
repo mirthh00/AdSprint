@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   const content = `# AdSprint — robots.txt
-# https://www.adsprint.co.za
+# https://www.adsprint.codesprint.co.za
 
 User-agent: *
 Allow: /
@@ -23,7 +23,7 @@ Disallow: /fail
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://www.adsprint.co.za/sitemap.xml
+Sitemap: https://www.adsprint.codesprint.co.za/sitemap.xml
 `
 
   return new NextResponse(content, {
