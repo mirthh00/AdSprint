@@ -130,11 +130,11 @@ const guarantees = [
     title: "If it doesn't match — we fix it free",
     desc: "If the delivered work doesn't align with your agreed brief, we go back to the drawing board at no additional cost. Your brief is our contract."
   },
-  {
-    icon: RefreshCcw,
-    title: "If you're still not satisfied — full refund",
-    desc: "After we've revised the work and you're still not happy, we refund you completely. No awkward conversations, no holdbacks."
-  },
+{
+  icon: RefreshCcw,
+  title: "If you're still not satisfied — full refund",
+  desc: "After we've revised the work and you're still not happy, we refund you completely and add R1,000 to make up for the inconvenience. No awkward conversations, no holdbacks."
+},
   {
     icon: BarChart3,
     title: "If your ad underperforms — we rebuild it",
@@ -187,6 +187,7 @@ const guarantees = [
   { q: 'What is your refund policy?', a: 'If delivered work does not match your agreed brief, we fix it free. If you are still not satisfied after revisions, you are entitled to a full refund for that deliverable, requested within 14 days of delivery. We process refunds within 7 business days via your original payment method.' },
   { q: 'Can I cancel my monthly plan?', a: 'Yes, at any time with 30 days\' written notice via email. Your plan remains active through the end of the billing cycle following the notice period. There are no cancellation penalties, no lock-in clauses, and no awkward conversations. We would rather you leave on good terms than stay unhappy.' },
   { q: 'What happens to my files if I cancel?', a: 'All creative deliverables you have paid for and received are yours to keep permanently. Cancellation does not affect your ownership of completed work. Any in-progress work at the time of cancellation will be completed, paused, or refunded pro-rata at your discretion.' },
+   { q: 'What if I’m not satisfied?', a: 'After we’ve made revisions and you’re still not satisfied, we issue a full refund and add R1,000 to make up for the inconvenience.' },
 
   // ── Communication & Support ──
   { q: 'How do I contact AdSprint after I sign up?', a: 'Active clients communicate with us primarily via calls (0633217882) and Microsoft Teams. Growth and Scale clients also have access to priority support with faster response times. We aim to respond to all queries within 1 business day.' },
@@ -287,7 +288,7 @@ useEffect(() => {
                   Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
                 </h1>
                 <p className="hero-subtitle reveal reveal-delay-2">
-                  We help businesses stay visible and impossible to ignore with high-converting monthly motion content - including free Google Ads management and a full hassle-free refund guarantee.
+                  We either blow your mind with our results, or we refund you and add R1,000 to make up for the inconvenience.
                 </p>
                 <div className="hero-cta reveal reveal-delay-3">
                   <a href="#pricing" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 28px' }} onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
