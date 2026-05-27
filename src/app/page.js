@@ -10,6 +10,7 @@ import {
    Lock,
   Trophy,
   FolderLock,
+   LineChart,
 } from 'lucide-react'
 
 /* ─── Theme ─── */
