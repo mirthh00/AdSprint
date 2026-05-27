@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const BASE_URL = 'https://www.adsprint.co.za'
+const BASE_URL = 'https://www.adsprint.codesprint.co.za'
 
 const pages = [
   {
