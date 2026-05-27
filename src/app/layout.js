@@ -2,7 +2,7 @@ import './globals.css'
 import Script from "next/script";
 
 export const metadata = {
-  title: 'AdSprint — Turn Attention Into Customers',
+  title: 'AdSprint — Motion Ads From R6000/Month',
   description: 'High-converting motion ads that help businesses attract, engage and convert.',
 }
 
