@@ -12,7 +12,7 @@
 
   <!-- Homepage — highest priority, changes often -->
   <url>
-    <loc>https://www.adsprint.co.za/</loc>
+    <loc>https://www.adsprint.codesprint.co.za/</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -24,35 +24,35 @@
   ═══════════════════════════════════ -->
 
   <url>
-    <loc>https://www.adsprint.co.za/#how-it-works</loc>
+    <loc>https://www.adsprint.codesprint.co.za/#how-it-works</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.adsprint.co.za/#our-work</loc>
+    <loc>https://www.adsprint.codesprint.co.za/#our-work</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.adsprint.co.za/#guarantees</loc>
+    <loc>https://www.adsprint.codesprint.co.za/#guarantees</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.adsprint.co.za/#pricing</loc>
+    <loc>https://www.adsprint.codesprint.co.za/#pricing</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.adsprint.co.za/#faq</loc>
+    <loc>https://www.adsprint.codesprint.co.za/#faq</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -64,7 +64,7 @@
 
   <!-- Checkout — high priority, Google Ads destination -->
   <url>
-    <loc>https://www.adsprint.co.za/checkout</loc>
+    <loc>https://www.adsprint.codesprint.co.za/checkout</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -75,14 +75,14 @@
   ═══════════════════════════════════ -->
 
   <url>
-    <loc>https://www.adsprint.co.za/termsofservice</loc>
+    <loc>https://www.adsprint.codesprint.co.za/termsofservice</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.adsprint.co.za/privacypolicy</loc>
+    <loc>https://www.adsprint.codesprint.co.za/privacypolicy</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
