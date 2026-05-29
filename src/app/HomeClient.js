@@ -285,7 +285,7 @@ useEffect(() => {
               <div>
               
                 <h1 className="hero-title reveal reveal-delay-1">
-                  South Africa's Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
+                  Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
                 </h1>
                 <p className="hero-subtitle reveal reveal-delay-2">
                   We either blow your mind with our results, or we refund you and add R1,000 to make up for the inconvenience.
@@ -363,8 +363,6 @@ useEffect(() => {
           </div>
         </section>
 
-
-// ADD this entire block directly BEFORE it:
 <section aria-label="About AdSprint" style={{
   padding: '40px 0',
   borderBottom: '1px solid var(--border)',
