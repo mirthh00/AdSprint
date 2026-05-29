@@ -285,7 +285,7 @@ useEffect(() => {
               <div>
               
                 <h1 className="hero-title reveal reveal-delay-1">
-                  Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
+                  South Africa's Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
                 </h1>
                 <p className="hero-subtitle reveal reveal-delay-2">
                   We either blow your mind with our results, or we refund you and add R1,000 to make up for the inconvenience.
@@ -309,7 +309,7 @@ useEffect(() => {
     <div key={i} className="avatar-image-wrap">
   <Image
     src={img}
-    alt="Client"
+    alt="Business client using AdSprint video advertising in South Africa"
     width={80}
     height={80}
     className="avatar-image"
@@ -330,7 +330,7 @@ useEffect(() => {
 <div className="">
   <Image
     src="/images/image2.webp"
-    alt="Microsoft Teams strategy call"
+    alt="High-converting motion ads for South African businesses — AdSprint agency Johannesburg"
     width={1200}
     height={800}
     style={{ width: "100%", height: "auto", display: "block" }}
@@ -346,7 +346,7 @@ useEffect(() => {
             LOGOS
         ════════════════════════════════════════ */}
         <section className="logos-section">
-          <p className="logos-label">Ads that look different. Results that make a difference.</p>
+          <p className="logos-label">Motion ads for South African businesses with results that make a difference.</p>
           <div className="logos-track-wrapper">
             <div className="logos-track">
               {[0, 1].map((set) => (
@@ -363,21 +363,47 @@ useEffect(() => {
           </div>
         </section>
 
-       
+
+// ADD this entire block directly BEFORE it:
+<section aria-label="About AdSprint" style={{
+  padding: '40px 0',
+  borderBottom: '1px solid var(--border)',
+}}>
+  <div className="container" style={{ maxWidth: 780 }}>
+    <p style={{
+      fontSize: '1rem',
+      color: 'var(--text-secondary)',
+      lineHeight: 1.85,
+      fontWeight: 300,
+      textAlign: 'center',
+    }}>
+      <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>AdSprint</strong> is 
+      a South African video advertising studio based in Johannesburg, Gauteng. We specialise 
+      in <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>motion ads</strong>, 
+      <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}> explainer videos</strong>, 
+      and <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>Google Ads management</strong> for 
+      businesses across South Africa. Every client gets a personal strategy call with our CEO 
+      within 20 minutes of signing up — and every plan comes with a full money-back guarantee 
+      if you are not completely satisfied.
+    </p>
+  </div>
+</section>
 
         {/* ════════════════════════════════════════
             HOW IT WORKS — 3-STEP PROCESS
         ════════════════════════════════════════ */}
-        <section id="how-it-works" className="section">
+        <section id="how-it-works" className="section" aria-label="How AdSprint works — South African motion ads process">
           <div className="container">
             <div className="section-header">
               <p className="section-label reveal">// How It Works</p>
-              <h2 className="section-title reveal reveal-delay-1">
-                From sign-up to<br /><em style={{ fontStyle: 'italic', color: 'var(--green)' }}>live ads</em> — in days
-              </h2>
-              <p className="section-subtitle reveal reveal-delay-2">
-                Three steps. No confusion. No waiting weeks to get started.
-              </p>
+            <h2 className="section-title reveal reveal-delay-1">
+  How Our South African<br />
+  <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>Motion Ads Agency</em> Works
+</h2>
+<p className="section-subtitle reveal reveal-delay-2">
+  From payment to live video ads in days — three simple steps, no confusion, 
+  no waiting weeks.
+</p>
             </div>
 
             <div className="process-grid">
@@ -393,7 +419,7 @@ useEffect(() => {
                <div className="process-teams-wrap">
   <Image
     src="/images/image0.webp"
-    alt="Microsoft Teams strategy call"
+    alt="How to choose a motion ads plan for your South African business"
     width={1200}
     height={800}
     style={{ width: "100%", height: "auto", display: "block" }}
@@ -414,7 +440,7 @@ useEffect(() => {
                     <div className="process-teams-wrap">
   <Image
     src="/images/teams-meeting.webp"
-    alt="Microsoft Teams strategy call"
+    alt="CEO strategy call via Microsoft Teams — AdSprint motion ads agency South Africa"
     width={1200}
     height={800}
     style={{ width: "100%", height: "auto", display: "block" }}
@@ -434,7 +460,7 @@ useEffect(() => {
                     <div className="process-teams-wrap">
   <Image
     src="/images/image1.webp"
-    alt="Microsoft Teams strategy call"
+    alt="Video ad content delivery for South African businesses — AdSprint"
     width={1200}
     height={800}
     style={{ width: "100%", height: "auto", display: "block" }}
@@ -454,7 +480,7 @@ useEffect(() => {
         {/* ════════════════════════════════════════
             OUR WORK — AD TYPES
         ════════════════════════════════════════ */}
-        <section id="our-work" className="section" style={{ paddingTop: 0 }}>
+        <section id="our-work" className="section" style={{ paddingTop: 0 }} aria-label="Video ad services for South African businesses">
            <div className="container">
             <div className="section-header">
               <p className="section-label reveal">// Our Work</p>
@@ -510,7 +536,7 @@ className="video-showcase-inner"
                    <div className="process-teams-wrap ">
                   <img
                     src={f.preview}
-                    alt="Microsoft Teams strategy call"
+                    alt="Motion ads for South African businesses — scroll-stopping video advertising"
                     style={{ width: '100%', height: 'auto', display: 'block' }}
                   />
                 </div>
@@ -529,7 +555,7 @@ className="video-showcase-inner"
           <div className="team-photo-wrap">
             <img
               src="/images/team.webp"
-              alt="The AdSprint team"
+              alt="AdSprint creative team — motion ads and video advertising agency Johannesburg South Africa"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
             />
             <div className="team-photo-overlay" />
@@ -554,7 +580,7 @@ className="video-showcase-inner"
                 <div className="ceo-photo-frame">
                   <Image
   src="/images/ceo.webp"
-  alt="Nhlamulo Mabunda"
+  alt="Nhlamulo Mabunda — Founder and CEO of AdSprint, motion ads agency Johannesburg"
   width={500}
   height={500}
   style={{ width: "100%", height: "auto" }}
@@ -599,7 +625,7 @@ className="video-showcase-inner"
 
                 <div className="ceo-sign-row">
                   <div className="ceo-sign-avatar">
-                    <img src="/images/ceo.webp" alt="Nhlamulo Mabunda" />
+                    <img src="/images/ceo.webp" alt="Nhlamulo Mabunda — Founder and CEO of AdSprint, motion ads agency Johannesburg" />
                   </div>
                   <div className="ceo-sign-text">
                     <strong>Nhlamulo Mabunda</strong>
@@ -614,16 +640,19 @@ className="video-showcase-inner"
         {/* ════════════════════════════════════════
             GUARANTEES
         ════════════════════════════════════════ */}
-        <section id="guarantees" className="guarantees-section" style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+        <section id="guarantees" className="guarantees-section" style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} aria-label="AdSprint guarantees and money-back policy">
           <div className="container">
             <div className="section-header" style={{ textAlign: 'center' }}>
               <p className="section-label reveal" style={{ textAlign: 'center' }}>// Our Promise</p>
               <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
-                Here's what we<br /><em style={{ fontStyle: 'italic', color: 'var(--green)' }}>guarantee.</em>
-              </h2>
-              <p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
-                We're not asking you to trust us blindly. We're removing every reason not to try us.
-              </p>
+  Why SA Businesses Choose<br />
+  <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>AdSprint</em>
+</h2>
+<p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
+  Industry-leading guarantees that remove every reason not to try us — 
+  including a full refund plus R1,000 if you are not satisfied.
+</p>
+            
             </div>
 
            <div className="guarantee-grid">
@@ -718,16 +747,18 @@ className="video-showcase-inner"
         {/* ════════════════════════════════════════
             PRICING — LIQUID GLASS
         ════════════════════════════════════════ */}
-        <section id="pricing" className="pricing-section">
+        <section id="pricing" className="pricing-section" aria-label="Motion ads pricing plans for South African businesses">
           <div className="container">
             <div className="section-header" style={{ textAlign: 'center' }}>
               <p className="section-label reveal" style={{ textAlign: 'center' }}>// Pricing</p>
-              <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
-                Choose the plan that<br />fits your growth
-              </h2>
-              <p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
-                Simple. Transparent. Results-driven.
-              </p>
+             <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
+  Motion Ads Pricing for<br />
+  <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>South African Businesses</em>
+</h2>
+<p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
+  Transparent monthly plans in ZAR — no hidden fees, no long-term contracts, 
+  cancel any time with 30 days notice.
+</p>
             </div>
 
             <div className="pricing-grid" ref={pricingRef}>
@@ -761,11 +792,16 @@ className="video-showcase-inner"
         {/* ════════════════════════════════════════
             FAQ
         ════════════════════════════════════════ */}
-<section id="faq" className="section" style={{ paddingTop: 0 }}>
+<section id="faq" className="section" style={{ paddingTop: 0 }} aria-label="Frequently asked questions about AdSprint South Africa">
   <div className="container" style={{ maxWidth: 720 }}>
     <div className="section-header" style={{ textAlign: 'center' }}>
       <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
-      <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>Questions answered</h2>
+     <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
+  Frequently Asked Questions
+</h2>
+<p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, marginTop: '8px', marginBottom: '36px' }}>
+  Everything South African businesses ask before signing up with AdSprint
+</p>
     </div>
   </div>
 
@@ -809,25 +845,50 @@ className="video-showcase-inner"
       </main>
 
       {/* ─── FOOTER ─── */}
-      <footer>
-        <div className="container">
-          <div className="footer-inner">
-            <div>
-              <a href="#" className="nav-logo" style={{ fontSize: '1.2rem', textDecoration: 'none', display: 'inline-flex' }} onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>
-                <div className="nav-logo-dot" />
-                AdSprint
-              </a>
-              <p className="footer-copy" style={{ marginTop: 8 }}>
-                © {new Date().getFullYear()} AdSprint. All rights reserved.
-              </p>
-            </div>
-            <div className="footer-links">
-              <a href="/privacypolicy">Privacy</a>
-              <a href="/termsofservice">Terms</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+    <footer>
+  <div className="container">
+    <div className="footer-inner">
+      <div>
+        
+          href="#"
+          className="nav-logo"
+          style={{ fontSize: '1.2rem', textDecoration: 'none', display: 'inline-flex' }}
+          onClick={(e) => { e.preventDefault(); scrollTo('hero') }}
+        >
+          <div className="nav-logo-dot" />
+          AdSprint
+        </a>
+        <p className="footer-copy" style={{ marginTop: 8 }}>
+          © {new Date().getFullYear()} AdSprint — Motion Ads Agency, Johannesburg, South Africa.
+        </p>
+        <p className="footer-copy" style={{ marginTop: 4, fontSize: '0.72rem' }}>
+          A CodeSprint product under Mirthh (Pty) Ltd.
+        </p>
+        <address style={{
+          fontStyle: 'normal',
+          fontSize: '0.75rem',
+          color: 'var(--text-tertiary)',
+          fontWeight: 300,
+          marginTop: 10,
+          lineHeight: 1.7,
+        }}>
+          Johannesburg, Gauteng, South Africa<br />
+          <a href="tel:0633217882" style={{ color: 'var(--text-tertiary)', textDecoration: 'none' }}>
+            063 321 7882
+          </a>
+        </address>
+      </div>
+      <div className="footer-links">
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/#our-work">Our Work</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/privacypolicy">Privacy Policy</a>
+        <a href="/termsofservice">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
     </>
   )
 }
