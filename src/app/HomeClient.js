@@ -369,17 +369,23 @@ useEffect(() => {
 }}>
   <div className="container" style={{ maxWidth: 780 }}>
     <p style={{
-      fontSize: '1rem',
-      color: 'var(--text-secondary)',
-      lineHeight: 1.85,
-      fontWeight: 300,
-      textAlign: 'center',
-    }}>
-      <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>AdSprint</strong> is 
+  fontFamily: "'Cormorant Garamond', serif",
+  fontSize: "clamp(1.4rem, 2.2vw, 1.95rem)",
+  fontStyle: "italic",
+  fontWeight: 400,
+  color: "var(--text-primary)",
+  lineHeight: 1.32,
+  letterSpacing: "-0.025em",
+  marginBottom: "32px",
+  paddingLeft: "22px",
+  borderLeft: "2px solid var(--green)",
+  textAlign: "center",
+}}>
+      <strong style={{ color: 'green', fontWeight: 600 }}>AdSprint</strong> is 
       a South African video advertising studio based in Johannesburg, Gauteng. We specialise 
-      in <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>motion ads</strong>, 
-      <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}> explainer videos</strong>, 
-      and <strong style={{ color: 'var(--text-primary)', fontWeight: 500 }}>Google Ads management</strong> for 
+      in <strong style={{ color: 'green', fontWeight: 500 }}>motion ads</strong>, 
+      <strong style={{ color: 'green', fontWeight: 500 }}> explainer videos</strong>, 
+      and <strong style={{ color: 'green', fontWeight: 500 }}>Google Ads management</strong> for 
       businesses across South Africa. Every client gets a personal strategy call with our CEO 
       within 20 minutes of signing up — and every plan comes with a full money-back guarantee 
       if you are not completely satisfied.
