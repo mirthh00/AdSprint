@@ -108,9 +108,9 @@ export default function Home() {
   const logos = ['Meta', 'Instagram', 'TikTok', 'YouTube', 'Google', 'X / Twitter', 'LinkedIn', 'Pinterest']
 
   const features = [
-    { icon: '⚡', title: 'Motion Ads', desc: 'Scroll-stopping ads engineered to capture attention in the first 1.5 seconds and drive measurable action.', preview: '/images/image5.jpeg', previewText: 'SUMMER\nSALE' },
-    { icon: '💬', title: 'Explainer Videos', desc: 'Simplify your message with visually compelling narratives that make your offer irresistible.', preview: '/images/image4.jpeg', previewText: 'What is\nAdSprint?' },
-    { icon: '❓', title: 'FAQ Videos', desc: 'Build trust, remove objections, and convert hesitant prospects into confident buyers.', preview: '/images/image3.jpeg', previewText: 'FAQ\nAnswered' },
+    { icon: '⚡', title: 'Motion Ads', desc: 'Scroll-stopping ads engineered to capture attention in the first 1.5 seconds and drive measurable action.', preview: '/images/image5.webp', previewText: 'SUMMER\nSALE' },
+    { icon: '💬', title: 'Explainer Videos', desc: 'Simplify your message with visually compelling narratives that make your offer irresistible.', preview: '/images/image4.webp', previewText: 'What is\nAdSprint?' },
+    { icon: '❓', title: 'FAQ Videos', desc: 'Build trust, remove objections, and convert hesitant prospects into confident buyers.', preview: '/images/image3.webp', previewText: 'FAQ\nAnswered' },
   ]
 
   const plans = [
@@ -301,10 +301,10 @@ useEffect(() => {
                 <div className="hero-trust reveal reveal-delay-4">
                   <div className="hero-avatars">
   {[
-    '/images/logo0.jpeg',
-    '/images/logo2.jpeg',
-    '/images/logo3.jpeg',
-    '/images/logo00.jpeg',
+    '/images/logo0.webp',
+    '/images/logo2.webp',
+    '/images/logo3.webp',
+    '/images/logo00.webp',
   ].map((img, i) => (
     <div key={i} className="avatar-image-wrap">
   <Image
@@ -329,7 +329,7 @@ useEffect(() => {
 
 <div className="">
   <Image
-    src="/images/image2.png"
+    src="/images/image2.webp"
     alt="Microsoft Teams strategy call"
     width={1200}
     height={800}
@@ -392,7 +392,7 @@ useEffect(() => {
                 <div className="process-step-num">Step 01</div>
                <div className="process-teams-wrap">
   <Image
-    src="/images/image0.png"
+    src="/images/image0.webp"
     alt="Microsoft Teams strategy call"
     width={1200}
     height={800}
@@ -413,7 +413,7 @@ useEffect(() => {
                 
                     <div className="process-teams-wrap">
   <Image
-    src="/images/teams-meeting.png"
+    src="/images/teams-meeting.webp"
     alt="Microsoft Teams strategy call"
     width={1200}
     height={800}
@@ -433,7 +433,7 @@ useEffect(() => {
                 
                     <div className="process-teams-wrap">
   <Image
-    src="/images/image1.png"
+    src="/images/image1.webp"
     alt="Microsoft Teams strategy call"
     width={1200}
     height={800}
@@ -528,7 +528,7 @@ className="video-showcase-inner"
         <section id="our-team" className="team-section">
           <div className="team-photo-wrap">
             <img
-              src="/images/team.jpg"
+              src="/images/team.webp"
               alt="The AdSprint team"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
             />
@@ -553,7 +553,7 @@ className="video-showcase-inner"
               <div className="reveal">
                 <div className="ceo-photo-frame">
                   <Image
-  src="/images/ceo.jpg"
+  src="/images/ceo.webp"
   alt="Nhlamulo Mabunda"
   width={500}
   height={500}
@@ -599,7 +599,7 @@ className="video-showcase-inner"
 
                 <div className="ceo-sign-row">
                   <div className="ceo-sign-avatar">
-                    <img src="/images/ceo.jpg" alt="Nhlamulo Mabunda" />
+                    <img src="/images/ceo.webp" alt="Nhlamulo Mabunda" />
                   </div>
                   <div className="ceo-sign-text">
                     <strong>Nhlamulo Mabunda</strong>
