@@ -363,36 +363,6 @@ useEffect(() => {
           </div>
         </section>
 
-<section aria-label="About AdSprint" style={{
-  padding: '40px 0',
-  borderBottom: '1px solid var(--border)',
-}}>
-  <div className="container" style={{ maxWidth: 780 }}>
-    <p style={{
-  fontFamily: "'Cormorant Garamond', serif",
-  fontSize: "clamp(1.4rem, 2.2vw, 1.95rem)",
-  fontStyle: "italic",
-  fontWeight: 400,
-  color: "var(--text-primary)",
-  lineHeight: 1.32,
-  letterSpacing: "-0.025em",
-  marginBottom: "32px",
-  paddingLeft: "22px",
-  borderLeft: "2px solid var(--green)",
-  textAlign: "center",
-}}>
-      <strong style={{ color: 'green', fontWeight: 600 }}>AdSprint</strong> is 
-      a South African video advertising studio based in Johannesburg, Gauteng. We specialise 
-      in <strong style={{ color: 'green', fontWeight: 500 }}>motion ads</strong>, 
-      <strong style={{ color: 'green', fontWeight: 500 }}> explainer videos</strong>, 
-      and <strong style={{ color: 'green', fontWeight: 500 }}>Google Ads management</strong> for 
-      businesses across South Africa. Every client gets a personal strategy call with our CEO 
-      within 20 minutes of signing up — and every plan comes with a full money-back guarantee 
-      if you are not completely satisfied.
-    </p>
-  </div>
-</section>
-
         {/* ════════════════════════════════════════
             HOW IT WORKS — 3-STEP PROCESS
         ════════════════════════════════════════ */}
