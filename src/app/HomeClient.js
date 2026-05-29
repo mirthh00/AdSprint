@@ -475,10 +475,10 @@ useEffect(() => {
 className="video-showcase-inner"
 >
   <iframe
-    src="https://player.vimeo.com/video/1196583478?background=1&autoplay=1&loop=1&muted=1"
+    src="https://player.vimeo.com/video/1196583478?autoplay=1&muted=1&loop=1&controls=1&title=0&byline=0&portrait=0"
     frameBorder="0"
-    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowFullScreen
     loading="lazy"
     style={{
       position: "absolute",
