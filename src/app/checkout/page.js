@@ -39,13 +39,17 @@ const PLANS = [
     id: 'Starter',
     name: 'Starter',
     tagline: 'Try it out',
+    currency: 'R',
     price: '3,000',
     priceNum: 3000,
     period: 'Monthly',
+    cta: 'Get Started',
+    ctaClass: 'outlined',
     popular: false,
     features: [
       '2 custom motion ads',
       '2 custom motion explainer videos',
+      'Google / Social Ads setup - designed to reduce wasted spend',
       'Sound effects',
       'Voice overs',
       'Simple animations',
@@ -57,9 +61,12 @@ const PLANS = [
     id: 'Growth',
     name: 'Growth',
     tagline: 'Get consistent customers',
+    currency: 'R',
     price: '6,000',
     priceNum: 6000,
     period: 'Monthly',
+    cta: 'Start Growing',
+    ctaClass: 'solid',
     popular: true,
     features: [
       '4 custom motion ads, explainer videos & FAQ videos',
@@ -67,7 +74,7 @@ const PLANS = [
       'Sound effects',
       'Voice overs',
       'Unlimited revisions',
-      'Google / Social ads setup - designed to reduce wasted spend',
+      'Google / Social Ads management - designed to reduce wasted spend',
       'Performance optimisation',
       'Fast delivery (24h)',
       'Priority support',
@@ -77,21 +84,24 @@ const PLANS = [
     id: 'Scale',
     name: 'Scale',
     tagline: 'Accelerate your growth',
+    currency: 'R',
     price: '12,000',
     priceNum: 12000,
     period: 'Monthly',
+    cta: 'Scale My Business',
+    ctaClass: 'outlined',
     popular: false,
     features: [
       'Double of everything in Growth',
       'Complex 2D & 3D animations',
       'Multiple variations for testing',
       'Advanced messaging direction',
-      'Google / Social ads management',
+      'Google / Social Ads management - designed to reduce wasted spend',
       'Ongoing content flow',
       'Priority handling',
     ],
   },
-]
+];
 
 function CheckoutContent() {
   /* ── Get plan from URL param ── */
@@ -509,11 +519,11 @@ const handleSubmit = async (e) => {
   <Wallet size={22} strokeWidth={2.2} />
 </div>
             <div className="trust-body">
-              <strong>Full Refund Guarantee</strong>
-              <p>
-                If the work doesn't match your brief, we fix it free. If you're still not satisfied — we refund you completely, no questions asked.
-              </p>
-            </div>
+  <strong>Full Refund Guarantee</strong>
+  <p>
+    If the work doesn't match your brief, we fix it free. If you're still not satisfied — we refund you completely and add an extra R1,000 to make up for the inconvenience, no questions asked.
+  </p>
+</div>
           </div>
 
           {/* No lock-in */}
