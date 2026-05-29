@@ -307,12 +307,14 @@ useEffect(() => {
     '/images/logo00.jpeg',
   ].map((img, i) => (
     <div key={i} className="avatar-image-wrap">
-      <img
-        src={img}
-        alt="Client"
-        className="avatar-image"
-      />
-    </div>
+  <Image
+    src={img}
+    alt="Client"
+    width={80}
+    height={80}
+    className="avatar-image"
+  />
+</div>
   ))}
 </div>
                   <p className="hero-trust-text">
@@ -325,13 +327,15 @@ useEffect(() => {
               <div className="hero-visual reveal reveal-delay-2">
                 
 
- <div className="">
-                  <img
-                    src="/images/image2.png"
-                    alt="Microsoft Teams strategy call"
-                    style={{ width: '100%', height: '100%', display: 'block' }}
-                  />
-                </div>
+<div className="">
+  <Image
+    src="/images/image2.png"
+    alt="Microsoft Teams strategy call"
+    width={1200}
+    height={800}
+    style={{ width: "100%", height: "auto", display: "block" }}
+  />
+</div>
              
               </div>
             </div>
@@ -386,13 +390,15 @@ useEffect(() => {
               {/* Step 1 */}
               <div className="process-card reveal reveal-delay-1">
                 <div className="process-step-num">Step 01</div>
-                <div className="process-teams-wrap">
-                  <img
-                    src="/images/image0.png"
-                    alt="Microsoft Teams strategy call"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                  />
-                </div>
+               <div className="process-teams-wrap">
+  <Image
+    src="/images/image0.png"
+    alt="Microsoft Teams strategy call"
+    width={1200}
+    height={800}
+    style={{ width: "100%", height: "auto", display: "block" }}
+  />
+</div>
              
                 <h3>Choose Your Plan</h3>
                 <p>
@@ -404,13 +410,16 @@ useEffect(() => {
               <div className="process-card reveal reveal-delay-2">
                 <div className="process-step-num">Step 02</div>
                 {/* Teams meeting illustration */}
-                <div className="process-teams-wrap">
-                  <img
-                    src="/images/teams-meeting.png"
-                    alt="Microsoft Teams strategy call"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                  />
-                </div>
+                
+                    <div className="process-teams-wrap">
+  <Image
+    src="/images/teams-meeting.png"
+    alt="Microsoft Teams strategy call"
+    width={1200}
+    height={800}
+    style={{ width: "100%", height: "auto", display: "block" }}
+  />
+</div>
                 <h3>Strategy Call With the CEO</h3>
                 <p>
                   Within <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>20 minutes of payment</strong>, you'll receive a Microsoft Teams invite directly from our CEO. Together you'll align on your brand voice, target audience, and creative direction before a single frame is produced.
@@ -421,13 +430,16 @@ useEffect(() => {
               {/* Step 3 */}
               <div className="process-card reveal reveal-delay-3">
                 <div className="process-step-num">Step 03</div>
-                <div className="process-teams-wrap">
-                  <img
-                    src="/images/image1.png"
-                    alt="Microsoft Teams strategy call"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                  />
-                </div>
+                
+                    <div className="process-teams-wrap">
+  <Image
+    src="/images/image1.png"
+    alt="Microsoft Teams strategy call"
+    width={1200}
+    height={800}
+    style={{ width: "100%", height: "auto", display: "block" }}
+  />
+</div>
                
                 <h3>Content Released Per Your Plan</h3>
                 <p>
@@ -455,34 +467,31 @@ useEffect(() => {
             </div>
 
    <div className="video-showcase reveal reveal-delay-3">
-  <div className="video-showcase-inner">
-    <video
-      className="showcase-video"
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="auto"
-      onPlay={(e) => {
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              e.target.play()
-            } else {
-              e.target.pause()
-            }
-          },
-          { threshold: 0.45 }
-        )
-
-        observer.observe(e.target)
-      }}
-    >
-      <source src="/videos/showcase.mp4" type="video/mp4" />
-    </video>
-
-    <div className="video-overlay-shadow" />
+          <div
+  style={{
+    paddingTop: "49.17%",
+    position: "relative",
+  }}
+className="video-showcase-inner"
+>
+  <iframe
+    src="https://player.vimeo.com/video/1196583478?background=1&autoplay=1&loop=1&muted=1"
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    loading="lazy"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+    title="showcase"
+  />
+      <div className="video-overlay-shadow" />
 </div>
+ 
 </div>
           </div>
           <div className="container">
@@ -543,10 +552,13 @@ useEffect(() => {
               {/* Photo */}
               <div className="reveal">
                 <div className="ceo-photo-frame">
-                  <img
-                    src="/images/ceo.jpg"
-                    alt="Nhlamulo Mabunda"
-                  />
+                  <Image
+  src="/images/ceo.jpg"
+  alt="Nhlamulo Mabunda"
+  width={500}
+  height={500}
+  style={{ width: "100%", height: "auto" }}
+/>
                   <div className="ceo-name-card">
                     <div className="ceo-name-main">Nhlamulo Mabunda</div>
                     <div className="ceo-name-role">Founder & CEO, AdSprint (By CodeSprint under Mirthh (Pty) Ltd) — Johannesburg</div>
