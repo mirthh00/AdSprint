@@ -848,7 +848,7 @@ className="video-showcase-inner"
     <footer>
   <div className="container">
     <div className="footer-inner">
-      <div>
+      <a
         
           href="#"
           className="nav-logo"
@@ -877,7 +877,7 @@ className="video-showcase-inner"
             063 321 7882
           </a>
         </address>
-      </div>
+      
       <div className="footer-links">
         <a href="/#how-it-works">How It Works</a>
         <a href="/#our-work">Our Work</a>
