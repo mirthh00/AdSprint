@@ -7,10 +7,16 @@ import {
   RefreshCcw,
   BarChart3,
   DoorOpen,
-   Lock,
+  Lock,
   Trophy,
   FolderLock,
-   LineChart,
+  LineChart,
+  TrendingUp,
+  Zap,
+  Eye,
+  ShoppingCart,
+  Repeat,
+  Target,
 } from 'lucide-react'
 
 /* ─── Theme ─── */
@@ -98,142 +104,203 @@ export default function HomeClient() {
 
   const navLinks = [
     { label: 'How It Works', id: 'how-it-works' },
-    { label: 'Our Work', id: 'our-work' },
-    { label: 'Our Team', id: 'our-team' },
-    { label: 'Guarantees', id: 'guarantees' },
-    { label: 'Pricing', id: 'pricing' },
-    { label: 'FAQ', id: 'faq' },
+    { label: 'Our Work',     id: 'our-work'     },
+    { label: 'Our Team',     id: 'our-team'     },
+    { label: 'Guarantees',   id: 'guarantees'   },
+    { label: 'Pricing',      id: 'pricing'      },
+    { label: 'FAQ',          id: 'faq'          },
   ]
 
-  const logos = ['Meta', 'Instagram', 'TikTok', 'YouTube', 'Google', 'X / Twitter', 'LinkedIn', 'Pinterest']
+  /* Platforms SA e-commerce brands advertise on */
+  const platforms = ['Meta', 'Instagram', 'TikTok', 'YouTube', 'Google Shopping', 'Takealot', 'Shopify', 'WooCommerce']
 
+  /* Ad type features — e-commerce framed */
   const features = [
-    { icon: '⚡', title: 'Motion Ads', desc: 'Scroll-stopping ads engineered to capture attention in the first 1.5 seconds and drive measurable action.', preview: '/images/image5.webp', previewText: 'SUMMER\nSALE' },
-    { icon: '💬', title: 'Explainer Videos', desc: 'Simplify your message with visually compelling narratives that make your offer irresistible.', preview: '/images/image4.webp', previewText: 'What is\nAdSprint?' },
-    { icon: '❓', title: 'FAQ Videos', desc: 'Build trust, remove objections, and convert hesitant prospects into confident buyers.', preview: '/images/image3.webp', previewText: 'FAQ\nAnswered' },
+    {
+      icon: '⚡',
+      title: 'Product Motion Ads',
+      desc: 'Show your product in motion — in use, in context, in real life. Motion ads generate 42% higher ROAS than static product images on Meta and TikTok.',
+      preview: '/images/image5.webp',
+    },
+    {
+      icon: '💬',
+      title: 'Product Explainer Videos',
+      desc: 'Turn browser hesitation into purchase confidence. 96% of online shoppers say a product video directly influences their buying decision.',
+      preview: '/images/image4.webp',
+    },
+    {
+      icon: '🛒',
+      title: 'Social Commerce Content',
+      desc: 'Native-style video for TikTok Shop, Instagram Shopping, and Facebook Marketplace — content that feels organic but performs like a paid ad.',
+      preview: '/images/image3.webp',
+    },
   ]
 
+  /* Pricing plans */
   const plans = [
-    { plan: 'entry', name: 'Starter', tagline: 'Try it out', currency: 'R', price: '3,000', period: 'Monthly', features: ['2 custom motion ads','2 custom motion explainer videos','Google / Social Ads setup - designed to reduce wasted spend', 'Sound effects', 'Voice overs','Simple animations' ,'Fast delivery (48h)', '4 revisions included'], cta: 'Get Started', ctaClass: 'outlined', popular: false },
-    { plan: 'growth', name: 'Growth', tagline: 'Get consistent customers', currency: 'R', price: '6,000', period: 'Monthly', features: ['4 custom motion ads, explainer videos & FAQ videos','2D & 3D Animations', 'Sound effects', 'Voice overs','Unlimited revisions','Google / Social Ads management - designed to reduce wasted spend', 'Performance optimisation', 'Fast delivery (24h)', 'Priority support'], cta: 'Start Growing', ctaClass: 'solid', popular: true },
-    { plan: 'scale', name: 'Scale', tagline: 'Accelerate your growth', currency: 'R', price: '12,000', period: 'Monthly', features: ['Double of everything in Growth','Complex 2D & 3D animations' ,'Multiple variations for testing', 'Advanced messaging direction', 'Google / Social Ads management - designed to reduce wasted spend', 'Ongoing content flow', 'Priority handling'], cta: 'Scale My Business', ctaClass: 'outlined', popular: false },
+    {
+      plan: 'entry',
+      name: 'Starter',
+      tagline: 'Test it on your store',
+      currency: 'R',
+      price: '3,000',
+      period: 'Monthly',
+      popular: false,
+      features: [
+        '2 product motion ads',
+        '2 product explainer videos',
+        'Google Shopping & Meta Ads setup',
+        'Sound effects & voice overs',
+        'Simple animations',
+        'Fast delivery (48h)',
+        '4 revisions included',
+      ],
+      cta: 'Get Started',
+      ctaClass: 'outlined',
+    },
+    {
+      plan: 'growth',
+      name: 'Growth',
+      tagline: 'Scale your store revenue',
+      currency: 'R',
+      price: '6,000',
+      period: 'Monthly',
+      popular: true,
+      features: [
+        '4 product motion ads, explainers & social commerce videos',
+        '2D & 3D product animations',
+        'Sound effects & voice overs',
+        'Unlimited revisions',
+        'Google Shopping & Meta Ads management',
+        'Performance optimisation & A/B testing',
+        'Fast delivery (24h)',
+        'Priority support',
+      ],
+      cta: 'Scale My Store',
+      ctaClass: 'solid',
+    },
+    {
+      plan: 'scale',
+      name: 'Scale',
+      tagline: 'Dominate your product category',
+      currency: 'R',
+      price: '12,000',
+      period: 'Monthly',
+      popular: false,
+      features: [
+        'Double of everything in Growth',
+        'Complex 2D & 3D product animations',
+        'Multiple creative variations for testing',
+        'Advanced product messaging direction',
+        'Full Google & Meta Ads management',
+        'Ongoing content flow — never run dry',
+        'Priority handling',
+      ],
+      cta: 'Dominate Your Category',
+      ctaClass: 'outlined',
+    },
   ]
 
-const guarantees = [
-  {
-  icon: LineChart,
-  title: "Free Google Ads Management Included",
-  desc: "Every package includes free Google Ads setup and management designed to reduce wasted ad spend, improve targeting, and maximize your return on ad spend (ROAS)."
-},
-  {
-    icon: ShieldCheck,
-    title: "If it doesn't match — we fix it free",
-    desc: "If the delivered work doesn't align with your agreed brief, we go back to the drawing board at no additional cost. Your brief is our contract."
-  },
-{
-  icon: RefreshCcw,
-  title: "If you're still not satisfied — full refund",
-  desc: "After we've revised the work and you're still not happy, we refund you completely and add R1,000 to make up for the inconvenience. No awkward conversations, no holdbacks."
-},
-  {
-    icon: BarChart3,
-    title: "If your ad underperforms — we rebuild it",
-    desc: "If your ad launches and underperforms against benchmarks, we strategically rebuild it from the ground up — at no extra cost to you."
-  },
-  {
-    icon: DoorOpen,
-    title: "Leave any time — 30 days notice",
-    desc: "If you feel we're simply not the right fit for your business, you can exit with just 30 days notice. No lock-ins, no questions asked."
-  },
-]
+  /* Guarantees */
+  const guarantees = [
+    {
+      icon: LineChart,
+      title: 'Free Google & Meta Ads Management',
+      desc: 'Every plan includes ads setup and management designed to reduce wasted spend, improve product targeting, and maximise your store\'s ROAS — at no extra cost.',
+    },
+    {
+      icon: ShieldCheck,
+      title: "Doesn't match the brief — we fix it free",
+      desc: "If the delivered creative doesn't align with your agreed product brief, we rebuild it at no additional cost. Your brief is our contract.",
+    },
+    {
+      icon: RefreshCcw,
+      title: 'Still not satisfied — full refund plus R1,000',
+      desc: "After revisions, if you're still not happy, we refund you in full and add R1,000 to compensate for your time. No holdbacks, no fine print.",
+    },
+    {
+      icon: BarChart3,
+      title: 'Ad underperforms after launch — we rebuild it',
+      desc: "If your product ad launches and underperforms against agreed benchmarks, we strategically rebuild it from the ground up at zero extra cost.",
+    },
+    {
+      icon: DoorOpen,
+      title: 'Leave any time — 30 days notice, no penalty',
+      desc: "Cancel your monthly plan with 30 days written notice. No lock-ins, no exit fees, no awkward calls. Your files stay yours regardless.",
+    },
+  ]
 
- const faqs = [
-  // ── Getting Started ──
-  { q: 'How long does it take to deliver?', a: 'All plans operate on a rolling monthly production schedule — typically 5–7 business days per batch — with dedicated pipeline priority. The first batch takes 2 days in Starter and just a day in Growth & Scale.' },
-  { q: 'What platforms are the ads optimised for?', a: 'We create ads optimised for Meta (Facebook & Instagram), TikTok, YouTube, Google Display & YouTube Ads, and X (Twitter) — across all placements, aspect ratios (9:16, 1:1, 16:9), and file format requirements for each platform.' },
-  { q: 'Can you help with the script?', a: 'Absolutely. All Growth and Scale plans include full messaging guidance and script direction. We help you identify your hook, core value proposition, and call-to-action before a single frame is produced. Starter clients receive basic creative direction during the strategy call.' },
-  { q: 'Do you offer revisions?', a: 'Starter includes 4 revision rounds. Growth and Scale plans include unlimited revisions within the billing cycle. We work until the creative genuinely reflects your brief — that\'s a promise.' },
-  { q: 'How quickly do I hear from you after signing up?', a: 'Within 20 minutes of payment you will receive a Microsoft Teams invite directly from our CEO, John Doe, to discuss your strategy, goals, audience, and creative direction personally. If you sign up outside business hours (Mon–Fri, 08:00–18:00 SAST), your invite will arrive first thing the next business morning.' },
+  /* FAQs — e-commerce focused */
+  const faqs = [
+    // Getting started
+    { q: 'How quickly will I get my first product ads?', a: 'Starter plan ads are delivered within 48 hours of your strategy call. Growth and Scale plan ads are delivered within 24 hours. All plans operate on a rolling monthly production schedule — typically 5–7 business days per batch.' },
+    { q: 'Which platforms are the ads built for?', a: 'We create product ads optimised for Meta (Facebook & Instagram), TikTok, YouTube, Google Shopping, and Google Display — across all placements, aspect ratios (9:16, 1:1, 16:9), and platform-specific format requirements. Every ad is mobile-first.' },
+    { q: 'How quickly do I hear from you after I pay?', a: 'Within 20 minutes of payment you receive a Microsoft Teams invite directly from our CEO, Nhlamulo Mabunda, to discuss your products, brand, target audience, and creative direction personally. If you pay outside business hours (Mon–Fri, 08:00–18:00 SAST), your invite arrives first thing the next morning.' },
+    { q: 'Do you help write the script or hook for the ad?', a: 'Yes. Growth and Scale plans include full hook strategy, script direction, and messaging guidance. We identify your product\'s strongest selling angle before a single frame is produced. Starter clients receive basic creative direction during the strategy call.' },
+    { q: 'How many revisions do I get?', a: 'Starter includes 4 revision rounds. Growth and Scale plans include unlimited revisions within the billing cycle. We work until the creative genuinely performs — that is our commitment.' },
 
-  // ── About AdSprint ──
-  { q: 'Who actually makes my ads?', a: 'Your ads are produced by our in-house creative team, led and overseen personally by Nhlamulo Mabunda (Founder & CEO). We do not outsource to freelancers or third-party agencies. Every deliverable goes through our internal quality review before it reaches you.' },
-  { q: 'Where is AdSprint based?', a: 'We are based in Johannesburg, South Africa. We serve clients across South Africa and internationally. All pricing is in South African Rand (ZAR) and our business hours are Mon–Fri, 08:00–18:00 SAST.' },
-  { q: 'How experienced is the team?', a: 'Our CEO holds a BSc in Computer Science from the University of the Witwatersrand (Wits) and has personally overseen ads for 20+ businesses across a range of industries. Our creative team specialises exclusively in performance-driven motion content for digital advertising.' },
-  { q: 'Do you work with businesses outside South Africa?', a: 'Yes. While we are based in Johannesburg, we work with clients globally. Deliverables are shared digitally and strategy calls are held via Microsoft Teams, making geography a non-issue. Invoicing and payment are processed in ZAR via PayFast.' },
+    // About AdSprint
+    { q: 'Who actually makes the ads?', a: 'Your ads are produced by our in-house creative team led by Nhlamulo Mabunda (Founder & CEO). We do not outsource to freelancers or third-party studios. Every deliverable goes through our internal quality review before it reaches you.' },
+    { q: 'Where is AdSprint based?', a: 'We are based in Johannesburg, South Africa. We work with e-commerce brands across South Africa and internationally. All pricing is in ZAR and payments are processed securely via PayFast.' },
+    { q: 'Does AdSprint work with online stores outside South Africa?', a: 'Yes. Our team works with SA-based and international e-commerce brands. Deliverables are shared digitally and strategy calls are held via Microsoft Teams — location is never a barrier.' },
 
-  // ── Pricing & Payment ──
-  { q: 'Is there a setup fee or hidden cost?', a: 'None whatsoever. The price you see is the price you pay. No onboarding fees, no licensing fees, no surprise charges. Third-party assets (like licensed stock music or footage) will always be flagged and approved by you before use — we will never add costs without your explicit sign-off.' },
-  { q: 'Can I upgrade or downgrade my plan?', a: 'Yes. You can upgrade or downgrade your monthly plan at any time by emailing us. Upgrades take effect immediately. Downgrades take effect at the start of the next billing cycle. We will always make the transition as smooth as possible.' },
-  { q: 'What payment methods do you accept?', a: 'We accept all major payment methods available through PayFast, including credit and debit cards (Visa, Mastercard), Instant EFT, Mobicred, and more. All transactions are secured with 256-bit SSL encryption. We do not store any of your payment details.' },
-  { q: 'Do you offer a discount for annual payment?', a: 'We do not currently list annual pricing publicly, but we are open to custom arrangements for clients who want to commit to a full year. Reach out to us at hello@adsprint.co.za and we will put something together for you.' },
+    // Pricing & payment
+    { q: 'Are there any hidden fees?', a: 'None. The price you see is the price you pay. No setup fees, no onboarding fees, no licensing charges. Third-party assets (like licensed music) are always flagged and approved by you first — we never add costs without your explicit sign-off.' },
+    { q: 'Can I upgrade or downgrade my plan?', a: 'Yes. Upgrades take effect immediately. Downgrades take effect at the start of the next billing cycle. Email us and we handle the transition with no friction.' },
+    { q: 'What payment methods do you accept?', a: 'All major payment methods via PayFast — Visa, Mastercard, Instant EFT, Mobicred, and more. 256-bit SSL encryption on all transactions. We never store your payment details.' },
 
-  // ── The Process ──
-  { q: 'What happens after I pay?', a: 'Within 20 minutes you will receive a Microsoft Teams invite from our CEO. On the call we discuss your brand, target audience, creative direction, ad goals, and any reference material you have. After the call, our team begins production. You will receive your first draft within the timeline of your chosen plan.' },
-  { q: 'What do I need to provide?', a: 'Ideally: your logo and brand colours, any existing brand guidelines, product or service images/footage if applicable, and a brief description of your target audience and campaign goal. Do not worry if you do not have everything — that is exactly what the strategy call is for. We help you figure it out.' },
-  { q: 'What if I do not have a brief or clear idea of what I want?', a: 'That is completely fine. Our CEO strategy call is specifically designed to extract your goals, audience insights, and value proposition even if you are starting from zero. Many of our best-performing ads have come from clients who came to us with just a product and a vision.' },
-  { q: 'How do you share the final files?', a: 'Final deliverables are shared via a secure download link or a shared cloud folder (Google Drive or similar), in whatever format suits your needs — MP4, MOV, or platform-specific export settings. We will always confirm the correct format and resolution for your intended platform before exporting.' },
+    // The process
+    { q: 'What must I provide to get started?', a: 'Ideally: your logo and brand colours, product images or footage, and a brief description of your target customer and campaign goal. If you do not have everything — the strategy call is exactly where we figure it out together.' },
+    { q: 'How do I receive the final video files?', a: 'Via a secure download link or shared Google Drive folder in your required formats — MP4, MOV, or platform-specific exports. We always confirm the correct resolution and format for each platform before exporting.' },
 
-  // ── Quality & Results ──
-  { q: 'What if my ad does not perform well after launch?', a: 'If your ad underperforms against mutually agreed benchmarks after launch, we will strategically rebuild it at no additional cost. You will need to provide the analytics data showing the underperformance and we will get to work on a revised version with a fresh strategy.' },
-  { q: 'Do you guarantee results or ROAS?', a: 'We guarantee the quality and strategic integrity of every creative we produce. While no ethical agency can guarantee specific ROAS figures (ad performance is also affected by your targeting, budget, offer, and landing page), we back our work with a full rebuild guarantee if it underperforms and a refund guarantee if you are not satisfied after revisions.' },
-  { q: 'What makes your ads different from what I can make myself or with AI tools?', a: 'Our ads are built around performance psychology — hooks engineered for the first 1.5 seconds, messaging structured around your specific audience\'s objections, and motion design that competes with the best content on each platform. AI tools produce generic output. We produce strategic creative built on a real conversation about your business.' },
+    // Results & quality
+    { q: 'What if my product ad does not perform after launch?', a: 'If it underperforms against mutually agreed benchmarks, we rebuild it strategically at no extra cost. Provide the analytics data showing the underperformance and we get to work immediately with a fresh creative approach.' },
+    { q: 'Can you guarantee my store\'s ROAS will improve?', a: 'No ethical agency can guarantee specific ROAS numbers — performance is also influenced by your product price, landing page, targeting, and offer. What we guarantee is the quality and strategic integrity of every creative, and a full rebuild if it underperforms.' },
+    { q: 'Why are motion ads better than the static images I\'m running now?', a: 'Video ads generate 42% higher ROAS than static image ads and receive 52% more engagement on Meta. In a product feed full of white-background photos, a motion ad showing your product in use stops the scroll. That is the entire difference between a sale and a skip.' },
+    { q: 'What makes AdSprint different from other SA marketing agencies?', a: 'We specialise exclusively in motion ads for e-commerce — not branding, not PR, not print. Our CEO is personally on every strategy call within 20 minutes of payment. We offer a refund plus R1,000 if you are not satisfied. And everything we build for you stays 100% confidential.' },
 
-  // ── Ownership & Confidentiality ──
-  { q: 'Who owns the ads once they are delivered?', a: 'You do. Upon full payment, copyright and all intellectual property rights in the final delivered creative are fully assigned to you. There are no ongoing licence fees, no usage restrictions, and no strings attached.' },
-  { q: 'Will AdSprint share or post my ads without my permission?', a: 'Never. We default to complete confidentiality. Your ads, strategy, results, and brand details will not be shared publicly or used in our marketing without your explicit written consent. We understand that a high-performing ad is a competitive advantage — and we protect it as such.' },
-  { q: 'Is my business strategy kept confidential?', a: 'Absolutely. Everything discussed in your strategy call and all information you share with us is treated as strictly confidential. We do not share client strategies, briefs, or results with any third party, including other clients or partner agencies.' },
+    // Ownership & confidentiality
+    { q: 'Who owns the product ads once delivered?', a: 'You do — 100%. Full copyright and intellectual property is assigned to you on delivery. No licences, no usage restrictions, no strings attached.' },
+    { q: 'Will you post my ads online without my permission?', a: 'Never. We default to complete confidentiality. Your product ads, sales data, and brand strategy are never shared publicly or used in our marketing without your explicit written consent.' },
 
-  // ── Refunds & Cancellations ──
-  { q: 'What is your refund policy?', a: 'If delivered work does not match your agreed brief, we fix it free. If you are still not satisfied after revisions, you are entitled to a full refund for that deliverable, requested within 14 days of delivery. We process refunds within 7 business days via your original payment method.' },
-  { q: 'Can I cancel my monthly plan?', a: 'Yes, at any time with 30 days\' written notice via email. Your plan remains active through the end of the billing cycle following the notice period. There are no cancellation penalties, no lock-in clauses, and no awkward conversations. We would rather you leave on good terms than stay unhappy.' },
-  { q: 'What happens to my files if I cancel?', a: 'All creative deliverables you have paid for and received are yours to keep permanently. Cancellation does not affect your ownership of completed work. Any in-progress work at the time of cancellation will be completed, paused, or refunded pro-rata at your discretion.' },
-   { q: 'What if I’m not satisfied?', a: 'After we’ve made revisions and you’re still not satisfied, we issue a full refund and add R1,000 to make up for the inconvenience.' },
+    // Refunds & cancellations
+    { q: 'What is your refund policy?', a: 'If delivered work does not match your agreed brief, we fix it free. If you remain unsatisfied after revisions, full refund plus R1,000 — requested within 14 days of delivery and processed within 7 business days via your original payment method.' },
+    { q: 'Can I cancel my monthly plan?', a: 'Yes, at any time with 30 days written notice via email. No cancellation penalties, no lock-in clauses. Your completed deliverables remain yours permanently regardless of cancellation.' },
 
-  // ── Communication & Support ──
-  { q: 'How do I contact AdSprint after I sign up?', a: 'Active clients communicate with us primarily via calls (0633217882) and Microsoft Teams. Growth and Scale clients also have access to priority support with faster response times. We aim to respond to all queries within 1 business day.' },
-  { q: 'What are your business hours?', a: 'Our team is available Monday to Friday, 08:00–18:00 SAST. We monitor emails outside these hours for urgent matters but all formal responses and deliveries are processed within business hours.' },
-  { q: 'Do I get a dedicated account manager?', a: 'Growth and Scale clients are managed directly by our senior team with consistent points of contact throughout your engagement. Starter clients are guided through the process from the initial CEO call through to delivery.' },
-]
+    // Support
+    { q: 'How do I contact AdSprint after I sign up?', a: 'Via phone (063 321 7882) and Microsoft Teams. Growth and Scale clients have priority support with faster response times. We respond to all queries within 1 business day.' },
+    { q: 'What are your business hours?', a: 'Monday to Friday, 08:00–18:00 SAST. We monitor messages outside these hours for urgent matters but all formal responses and deliveries are processed within business hours.' },
+  ]
 
-  const logoIcon = (name) => ({ Meta: '∞', Instagram: '◻', TikTok: '♪', YouTube: '▶', Google: 'G', 'X / Twitter': '✕', LinkedIn: 'in', Pinterest: '⊕' }[name] || '•')
-const pricingRef = useRef(null)
-useEffect(() => {
-  const el = pricingRef.current
+  const logoIcon = (name) => ({
+    Meta: '∞', Instagram: '◻', TikTok: '♪', YouTube: '▶',
+    'Google Shopping': 'G', Takealot: 'T', Shopify: '◈', WooCommerce: '⊕',
+  }[name] || '•')
 
-  if (!el) return
+  const pricingRef = useRef(null)
+  useEffect(() => {
+    const el = pricingRef.current
+    if (!el) return
+    if (window.innerWidth <= 600) {
+      requestAnimationFrame(() => {
+        const middleCard = el.children[1]
+        if (middleCard) el.scrollLeft = middleCard.offsetLeft - 16
+      })
+    }
+  }, [])
 
-  if (window.innerWidth <= 600) {
-    requestAnimationFrame(() => {
-      const middleCard = el.children[1]
-
-      if (middleCard) {
-        el.scrollLeft =
-          middleCard.offsetLeft -
-          16
-      }
-    })
-  }
-}, [])
   return (
     <>
       {/* ─── NAVBAR ─── */}
       <nav className="navbar">
         <a href="#" className="nav-logo" onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>
           <div className="nav-logo-dot" />
-         <div>
-      AdSprint
-      <div style={{
-        fontSize: '0.52rem',
-        fontFamily: "'JetBrains Mono', monospace",
-        fontWeight: 400,
-        color: 'var(--text-tertiary)',
-        letterSpacing: '0.04em',
-        marginTop: '1px',
-        lineHeight: 1,
-      }}>
-        By CodeSprint under Mirthh (Pty) Ltd
-      </div>
-    </div>
+          <div>
+            AdSprint
+            <div style={{ fontSize: '0.52rem', fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, color: 'var(--text-tertiary)', letterSpacing: '0.04em', marginTop: '1px', lineHeight: 1 }}>
+              By CodeSprint under Mirthh (Pty) Ltd
+            </div>
+          </div>
         </a>
 
         <ul className="nav-links">
@@ -248,7 +315,7 @@ useEffect(() => {
           <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
             {theme === 'dark' ? '☀️' : '🌙'}
           </button>
-          <a href="#pricing" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
+          <a href="/checkout" className="btn-primary">
             Get Started
           </a>
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
@@ -264,9 +331,7 @@ useEffect(() => {
         {navLinks.map((l) => (
           <a key={l.id} href={`#${l.id}`} onClick={(e) => { e.preventDefault(); scrollTo(l.id) }}>{l.label}</a>
         ))}
-        <a href="#pricing" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
-          Get Started <Arrow />
-        </a>
+        <a href="/checkout" className="btn-primary">Get Started <Arrow /></a>
       </div>
 
       <main>
@@ -283,75 +348,107 @@ useEffect(() => {
           <div className="container">
             <div className="hero-inner">
               <div>
-              
+                {/* Alert bar — Shein/Temu urgency hook */}
+                <div className="hero-badge reveal" style={{ background: 'rgba(255,60,60,0.08)', border: '1px solid rgba(255,60,60,0.2)', color: '#FF6B6B' }}>
+                  <div className="hero-badge-dot" style={{ background: '#FF6B6B', boxShadow: '0 0 8px #FF6B6B' }} />
+                  Shein & Temu now own 37% of SA online fashion
+                </div>
+
                 <h1 className="hero-title reveal reveal-delay-1">
-                  Motion Ads From R6000/Month.<br /><em>With Free Google Ads Setup.</em>
+                  Your SA Online Store<br />
+                  <em>Deserves Better Ads.</em>
                 </h1>
+
                 <p className="hero-subtitle reveal reveal-delay-2">
-                  We either blow your mind with our results, or we refund you and add R1,000 to make up for the inconvenience.
+                  AdSprint creates motion ads, product videos, and Google Shopping campaigns that help South African e-commerce brands compete — and win — against Shein, Temu, and Amazon. From R3,000/month with a full refund guarantee.
                 </p>
+
                 <div className="hero-cta reveal reveal-delay-3">
-                  <a href="#pricing" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 28px' }} onClick={(e) => { e.preventDefault(); scrollTo('pricing') }}>
-                    Get Started <Arrow />
+                  <a href="/checkout" className="btn-primary" style={{ fontSize: '1rem', padding: '14px 28px' }}>
+                    Get My First Ads <Arrow />
                   </a>
                   <button className="btn-ghost" style={{ fontSize: '1rem', padding: '14px 24px' }} onClick={() => scrollTo('guarantees')}>
                     See Our Guarantees
                   </button>
                 </div>
+
+                {/* Proof bar */}
                 <div className="hero-trust reveal reveal-delay-4">
                   <div className="hero-avatars">
-  {[
-    '/images/logo0.webp',
-    '/images/logo2.webp',
-    '/images/logo3.webp',
-    '/images/logo00.webp',
-  ].map((img, i) => (
-    <div key={i} className="avatar-image-wrap">
-  <Image
-    src={img}
-    alt="Business client using AdSprint video advertising in South Africa"
-    width={80}
-    height={80}
-    className="avatar-image"
-  />
-</div>
-  ))}
-</div>
+                    {['/images/logo0.webp', '/images/logo2.webp', '/images/logo3.webp', '/images/logo00.webp'].map((img, i) => (
+                      <div key={i} className="avatar-image-wrap">
+                        <Image src={img} alt="South African e-commerce brand using AdSprint motion ads" width={80} height={80} className="avatar-image" />
+                      </div>
+                    ))}
+                  </div>
                   <p className="hero-trust-text">
-                    Trusted by <strong>20+ businesses</strong><br />to grow and scale
+                    Trusted by <strong>20+ SA online stores</strong><br />to grow and scale
                   </p>
                 </div>
               </div>
 
-              {/* Phone mockup */}
+              {/* Hero visual */}
               <div className="hero-visual reveal reveal-delay-2">
-                
-
-<div className="">
-  <Image
-    src="/images/image2.webp"
-    alt="High-converting motion ads for South African businesses — AdSprint agency Johannesburg"
-    width={1200}
-    height={800}
-    style={{ width: "100%", height: "auto", display: "block" }}
-  />
-</div>
-             
+                <div className="">
+                  <Image
+                    src="/images/image2.webp"
+                    alt="South African e-commerce motion ads — product video advertising by AdSprint Johannesburg"
+                    width={1200}
+                    height={800}
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* ════════════════════════════════════════
-            LOGOS
+            URGENCY BANNER — THE SHEIN PROBLEM
+        ════════════════════════════════════════ */}
+        <section aria-label="The e-commerce competition problem in South Africa" style={{ padding: '48px 0', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)', borderTop: '1px solid var(--border)' }}>
+          <div className="container" style={{ maxWidth: 900 }}>
+            <p style={{
+              fontSize: 'clamp(0.875rem, 1.8vw, 1.0625rem)',
+              color: 'var(--text-secondary)',
+              lineHeight: 1.85,
+              fontWeight: 300,
+              textAlign: 'center',
+            }}>
+              Shein and Temu spent millions on motion ads, influencer content, and social commerce to capture{' '}
+              <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>37% of South Africa's online fashion market</strong> in under 5 years.
+              Their weapon was not price alone — it was{' '}
+              <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>video creative that stopped the scroll</strong>.
+              Local SA online stores running static product photos are losing to that every single day.{' '}
+              <strong style={{ color: 'var(--green)', fontWeight: 500 }}>AdSprint exists to close that gap.</strong>
+            </p>
+
+            {/* Mini stat row */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(12px, 3vw, 32px)', marginTop: 36, flexWrap: 'wrap' }}>
+              {[
+                { stat: '42%', label: 'higher ROAS with video vs static ads' },
+                { stat: '52%', label: 'more engagement on Meta with video' },
+                { stat: '70%+', label: 'of new SA online shoppers come from social video' },
+              ].map(({ stat, label }) => (
+                <div key={stat} style={{ textAlign: 'center', minWidth: 140 }}>
+                  <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 700, color: 'var(--green)', lineHeight: 1, letterSpacing: '-0.04em' }}>{stat}</div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', fontWeight: 300, marginTop: 6, maxWidth: 140 }}>{label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            PLATFORMS MARQUEE
         ════════════════════════════════════════ */}
         <section className="logos-section">
-          <p className="logos-label">Motion ads for South African businesses with results that make a difference.</p>
+          <p className="logos-label">Motion ads built to perform on every platform SA shoppers use</p>
           <div className="logos-track-wrapper">
             <div className="logos-track">
               {[0, 1].map((set) => (
                 <div key={set} className="logos-track-inner" aria-hidden={set === 1}>
-                  {[...logos, ...logos].map((name, i) => (
+                  {[...platforms, ...platforms].map((name, i) => (
                     <div key={`${set}-${i}`} className="logo-item">
                       <span style={{ fontSize: '1.3rem' }}>{logoIcon(name)}</span>
                       {name}
@@ -364,24 +461,36 @@ useEffect(() => {
         </section>
 
         {/* ════════════════════════════════════════
-            HOW IT WORKS — 3-STEP PROCESS
+            STATS
         ════════════════════════════════════════ */}
-        <section id="how-it-works" className="section" aria-label="How AdSprint works — South African motion ads process">
+        <section className="stats-section">
+          <div className="container">
+            <div className="stats-grid">
+              <StatItem number="20"  suffix="+"       label="SA Online Stores Served" />
+              <StatItem number="42"  suffix="%"       label="Avg ROAS Lift With Video Ads" />
+              <StatItem number="48"  suffix="h"       label="First Ad Delivered" />
+              <StatItem number="130" suffix="B+ ZAR"  label="SA E-Commerce Market 2025" />
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            HOW IT WORKS
+        ════════════════════════════════════════ */}
+        <section id="how-it-works" className="section" aria-label="How AdSprint works for South African e-commerce brands">
           <div className="container">
             <div className="section-header">
               <p className="section-label reveal">// How It Works</p>
-            <h2 className="section-title reveal reveal-delay-1">
-  How Our South African<br />
-  <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>Motion Ads Agency</em> Works
-</h2>
-<p className="section-subtitle reveal reveal-delay-2">
-  From payment to live video ads in days — three simple steps, no confusion, 
-  no waiting weeks.
-</p>
+              <h2 className="section-title reveal reveal-delay-1">
+                From payment to<br />
+                <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>live product ads</em> in days
+              </h2>
+              <p className="section-subtitle reveal reveal-delay-2">
+                Three steps. No agency politics. No waiting weeks. Your store starts advertising better immediately.
+              </p>
             </div>
 
             <div className="process-grid">
-              {/* Connector line */}
               <div className="process-connector">
                 <div className="process-connector-dot" />
                 <div className="process-connector-dot" />
@@ -390,134 +499,166 @@ useEffect(() => {
               {/* Step 1 */}
               <div className="process-card reveal reveal-delay-1">
                 <div className="process-step-num">Step 01</div>
-               <div className="process-teams-wrap">
-  <Image
-    src="/images/image0.webp"
-    alt="How to choose a motion ads plan for your South African business"
-    width={1200}
-    height={800}
-    style={{ width: "100%", height: "auto", display: "block" }}
-  />
-</div>
-             
+                <div className="process-teams-wrap">
+                  <Image src="/images/image0.webp" alt="Choose a motion ads plan for your South African online store" width={1200} height={800} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                </div>
                 <h3>Choose Your Plan</h3>
                 <p>
-                  Select the plan that fits your current growth stage — Starter, Growth, or Scale. Payment is simple and secure, and your journey begins the moment you check out.
+                  Pick the plan that matches your store's current revenue stage — Starter, Growth, or Scale. Payment is secure via PayFast and takes under 2 minutes.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="process-card reveal reveal-delay-2">
                 <div className="process-step-num">Step 02</div>
-                {/* Teams meeting illustration */}
-                
-                    <div className="process-teams-wrap">
-  <Image
-    src="/images/teams-meeting.webp"
-    alt="CEO strategy call via Microsoft Teams — AdSprint motion ads agency South Africa"
-    width={1200}
-    height={800}
-    style={{ width: "100%", height: "auto", display: "block" }}
-  />
-</div>
+                <div
+                  className="twenty-min-badge"
+                  style={{ marginBottom: 14 }}
+                >
+                  <span>⚡</span> Within 20 minutes of payment
+                </div>
+                <div className="process-teams-wrap">
+                  <Image src="/images/teams-meeting.webp" alt="CEO strategy call via Microsoft Teams — AdSprint motion ads for South African e-commerce" width={1200} height={800} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                  <div className="teams-badge"><span>🟦</span> Microsoft Teams</div>
+                </div>
                 <h3>Strategy Call With the CEO</h3>
                 <p>
-                  Within <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>20 minutes of payment</strong>, you'll receive a Microsoft Teams invite directly from our CEO. Together you'll align on your brand voice, target audience, and creative direction before a single frame is produced.
+                  Within <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>20 minutes of payment</strong>, our CEO personally invites you to a Microsoft Teams call to align on your products, audience, creative direction, and ad goals before production begins.
                 </p>
-               
               </div>
 
               {/* Step 3 */}
               <div className="process-card reveal reveal-delay-3">
                 <div className="process-step-num">Step 03</div>
-                
-                    <div className="process-teams-wrap">
-  <Image
-    src="/images/image1.webp"
-    alt="Video ad content delivery for South African businesses — AdSprint"
-    width={1200}
-    height={800}
-    style={{ width: "100%", height: "auto", display: "block" }}
-  />
-</div>
-               
-                <h3>Content Released Per Your Plan</h3>
+                <div className="process-teams-wrap">
+                  <Image src="/images/image1.webp" alt="Product video ads delivered for South African e-commerce stores — AdSprint" width={1200} height={800} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                </div>
+                <h3>Product Ads Delivered on Schedule</h3>
                 <p>
-                  With strategy locked in, our team gets to work. Your ads are produced, refined, and delivered on the schedule your plan promises — ready to launch across Meta, TikTok, YouTube, and beyond.
+                  Your motion ads are produced, refined, and delivered per your plan timeline — ready to launch on Meta, TikTok, Google Shopping, and beyond. First batch delivered in 24–48 hours.
                 </p>
-              
+                <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {['Starter: 2 product ads + 2 explainers, 48h delivery', 'Growth: 4 ads + animations, 24h delivery, ads managed', 'Scale: Double Growth, complex 3D, ongoing content flow'].map((item, i) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: '0.82rem', color: 'var(--text-secondary)', fontWeight: 300 }}>
+                      <span style={{ width: 18, height: 18, borderRadius: '50%', background: 'var(--green-subtle)', border: '1px solid rgba(0,232,122,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.5rem', color: 'var(--green)', flexShrink: 0, marginTop: 1 }}>✓</span>
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* ════════════════════════════════════════
-            OUR WORK — AD TYPES
+            OUR WORK — VIDEO SHOWCASE + AD TYPES
         ════════════════════════════════════════ */}
-        <section id="our-work" className="section" style={{ paddingTop: 0 }} aria-label="Video ad services for South African businesses">
-           <div className="container">
+        <section id="our-work" className="section" style={{ paddingTop: 0 }} aria-label="Motion ad services for South African e-commerce stores">
+          <div className="container">
             <div className="section-header">
               <p className="section-label reveal">// Our Work</p>
               <h2 className="section-title reveal reveal-delay-1">
-                What we can do<br />for your business.
+                The ads that make<br />SA shoppers stop scrolling.
               </h2>
               <p className="section-subtitle reveal reveal-delay-2">
-                Watch the kind of premium advertising content your business could be launching next.
+                Watch the quality of creative your store could be launching next week.
               </p>
             </div>
 
-   <div className="video-showcase reveal reveal-delay-3">
-          <div
-  style={{
-    paddingTop: "49.17%",
-    position: "relative",
-  }}
-className="video-showcase-inner"
->
-  <iframe
-    src="https://player.vimeo.com/video/1196583478?autoplay=1&muted=1&loop=1&controls=1&title=0&byline=0&portrait=0"
-    frameBorder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowFullScreen
-    loading="lazy"
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-    }}
-    title="showcase"
-  />
-      <div className="video-overlay-shadow" />
-</div>
- 
-</div>
+            <div className="video-showcase reveal reveal-delay-3">
+              <div style={{ paddingTop: '49.17%', position: 'relative' }} className="video-showcase-inner">
+                <iframe
+                  src="https://player.vimeo.com/video/1196583478?autoplay=1&muted=1&loop=1&controls=1&title=0&byline=0&portrait=0"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                  title="AdSprint product motion ads showcase — South African e-commerce"
+                />
+                <div className="video-overlay-shadow" />
+              </div>
+            </div>
           </div>
-          <div className="container">
+
+          <div className="container" style={{ marginTop: 80 }}>
             <div className="section-header">
               <h2 className="section-title reveal reveal-delay-1">
-                Ads that work<br />for every goal
+                Three ad types.<br />One store that converts.
               </h2>
               <p className="section-subtitle reveal reveal-delay-2">
-                Different types of content. Designed to get results across every platform and funnel stage.
+                Every format your SA online store needs to capture, persuade, and convert shoppers on every platform.
               </p>
             </div>
 
             <div className="features-grid">
               {features.map((f, i) => (
                 <div key={f.title} className={`feature-card reveal reveal-delay-${i + 1}`}>
-                   <div className="process-teams-wrap ">
-                  <img
-                    src={f.preview}
-                    alt="Motion ads for South African businesses — scroll-stopping video advertising"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                  />
-                </div>
+                  <div className="feature-icon">{f.icon}</div>
+                  <div className="process-teams-wrap">
+                    <img src={f.preview} alt={`${f.title} for South African e-commerce brands — AdSprint`} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                  </div>
                   <h3>{f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            THE PROBLEM WE SOLVE — E-COMMERCE SPECIFIC
+        ════════════════════════════════════════ */}
+        <section aria-label="Why South African e-commerce brands need motion ads" style={{ padding: '80px 0', background: 'var(--bg-2)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+          <div className="container">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+              {[
+                {
+                  icon: Target,
+                  headline: 'Your Competitor Has Better Creative',
+                  body: 'Right now there are SA online stores in your product category running motion ads that look like global brands. You are running the same static photo you uploaded two years ago. That is the entire gap.',
+                },
+                {
+                  icon: ShoppingCart,
+                  headline: 'Static Ads Are Getting More Expensive',
+                  body: 'Meta CPMs rose 19% in 2024 alone. The same budget buys fewer impressions every year. The only way to protect your ROAS is to increase your creative quality — not your budget.',
+                },
+                {
+                  icon: Eye,
+                  headline: 'SA Shoppers Decide in 1.5 Seconds',
+                  body: '77% of South African shoppers browse on mobile. They scroll at full speed. Your product has 1.5 seconds to stop them. A static image rarely does that. A motion ad almost always does.',
+                },
+                {
+                  icon: Repeat,
+                  headline: 'You Need Fresh Creative Every Month',
+                  body: 'Ad fatigue hits SA audiences within 2–4 weeks. Running the same creative kills performance even when targeting is perfect. A monthly motion ads partner solves this permanently.',
+                },
+                {
+                  icon: TrendingUp,
+                  headline: 'Social Commerce Is Your Biggest Growth Channel',
+                  body: 'Over 70% of new SA online shoppers discover products via social media. TikTok Shop, Instagram Shopping, and Facebook Marketplace are where your next 1,000 customers are. They need video to convert.',
+                },
+                {
+                  icon: Zap,
+                  headline: 'Google Shopping Rewards Better Ads Too',
+                  body: 'Google\'s Performance Max uses your creative quality as a bidding signal. Better product videos and motion ads lower your cost per click and increase your Shopping ad placements automatically.',
+                },
+              ].map((item, i) => {
+                const Icon = item.icon
+                return (
+                  <div key={item.headline} className={`feature-card reveal reveal-delay-${(i % 3) + 1}`} style={{ padding: '28px 24px' }}>
+                    <div className="feature-icon">
+                      <Icon size={22} strokeWidth={2.1} />
+                    </div>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: 10, letterSpacing: '-0.01em' }}>
+                      {item.headline}
+                    </h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.72, fontWeight: 300, margin: 0 }}>
+                      {item.body}
+                    </p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -529,15 +670,15 @@ className="video-showcase-inner"
           <div className="team-photo-wrap">
             <img
               src="/images/team.webp"
-              alt="AdSprint creative team — motion ads and video advertising agency Johannesburg South Africa"
+              alt="AdSprint creative team — motion ads agency for South African e-commerce brands, Johannesburg"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', display: 'block' }}
             />
             <div className="team-photo-overlay" />
             <div className="team-photo-content">
-              <p className="team-eyebrow">// Our People</p>
+              <p className="team-eyebrow">// The Team Behind Your Ads</p>
               <h2 className="team-headline">
-                Crafting ads that convert.<br />
-                <span style={{ color: 'var(--green)' }}>Every single time.</span>
+                SA-built creative that<br />
+                <span style={{ color: 'var(--green)' }}>competes with the world.</span>
               </h2>
             </div>
           </div>
@@ -549,45 +690,43 @@ className="video-showcase-inner"
         <section className="ceo-section" id="ceo">
           <div className="container">
             <div className="ceo-grid">
-              {/* Photo */}
               <div className="reveal">
                 <div className="ceo-photo-frame">
                   <Image
-  src="/images/ceo.webp"
-  alt="Nhlamulo Mabunda — Founder and CEO of AdSprint, motion ads agency Johannesburg"
-  width={500}
-  height={500}
-  style={{ width: "100%", height: "auto" }}
-/>
+                    src="/images/ceo.webp"
+                    alt="Nhlamulo Mabunda — Founder and CEO of AdSprint, motion ads agency for SA e-commerce"
+                    width={500}
+                    height={500}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
                   <div className="ceo-name-card">
                     <div className="ceo-name-main">Nhlamulo Mabunda</div>
-                    <div className="ceo-name-role">Founder & CEO, AdSprint (By CodeSprint under Mirthh (Pty) Ltd) — Johannesburg</div>
+                    <div className="ceo-name-role">Founder & CEO — AdSprint, Johannesburg</div>
                   </div>
                 </div>
               </div>
 
-              {/* Content */}
               <div className="ceo-col reveal reveal-delay-2">
                 <p className="section-label">// Words From The Founder</p>
 
                 <blockquote className="ceo-quote">
-                  "I started AdSprint because I watched too many great businesses get ignored — not because their product was weak, but because their ads were invisible. We fix that."
+                  "I watched too many great South African online stores lose to Shein — not because their products were worse, but because their ads were invisible. That ends here."
                 </blockquote>
 
                 <div className="ceo-bio">
                   <p>
-                    Nhlamulo Mabunda is a Computer Science graduate from the University of the Witwatersrand (Wits), Johannesburg. His background in systems thinking and data gave him an edge most creatives don't have — he builds ads that don't just look good, they perform with measurable precision.
+                    Nhlamulo Mabunda is a Computer Science graduate from the University of the Witwatersrand (Wits), Johannesburg. He built AdSprint with one specific purpose: to give South African e-commerce brands access to motion ad production that actually competes with global players — without the global agency price tag.
                   </p>
                   <p>
-                    His vision is straightforward: every business deserves world-class creative, not just those who can afford agency retainers. AdSprint was built to close that gap — combining elite-level production with transparent pricing and direct founder access from day one.
+                    His technical background means he does not just make ads that look good. He engineers them for performance — hooks calibrated to SA consumer psychology, creative structured around real purchase objections, and formats optimised for the specific platform where your audience buys.
                   </p>
                   <p>
-                    Nhlamulo personally leads the strategy call with every new client within 20 minutes of sign-up. Because he believes the difference between an ad that converts and one that doesn't often comes down to one conversation at the right time.
+                    Every new client gets a personal strategy call with Nhlamulo within 20 minutes of payment. Because the difference between an ad that grows your store and one that burns your budget usually comes down to one honest conversation about your product.
                   </p>
                 </div>
 
                 <div className="ceo-credentials">
-                  {['BSc Computer Science — Wits', 'Founder & CEO', '20+ Brands Scaled', 'Based in Johannesburg, SA', 'Motion & Performance Ads'].map((pill) => (
+                  {['BSc Computer Science — Wits', 'Founder & CEO', '20+ SA Online Stores Scaled', 'Based in Johannesburg, SA', 'E-Commerce Motion Ads'].map((pill) => (
                     <span key={pill} className="cred-pill">
                       <span style={{ fontSize: '0.7rem' }}>◆</span>
                       {pill}
@@ -599,11 +738,11 @@ className="video-showcase-inner"
 
                 <div className="ceo-sign-row">
                   <div className="ceo-sign-avatar">
-                    <img src="/images/ceo.webp" alt="Nhlamulo Mabunda — Founder and CEO of AdSprint, motion ads agency Johannesburg" />
+                    <img src="/images/ceo.webp" alt="Nhlamulo Mabunda — Founder and CEO of AdSprint" />
                   </div>
                   <div className="ceo-sign-text">
                     <strong>Nhlamulo Mabunda</strong>
-                    <span>Founder & CEO, AdSprint (By CodeSprint under Mirthh (Pty) Ltd) — Johannesburg</span>
+                    <span>Founder & CEO, AdSprint — Johannesburg, South Africa</span>
                   </div>
                 </div>
               </div>
@@ -614,42 +753,35 @@ className="video-showcase-inner"
         {/* ════════════════════════════════════════
             GUARANTEES
         ════════════════════════════════════════ */}
-        <section id="guarantees" className="guarantees-section" style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} aria-label="AdSprint guarantees and money-back policy">
+        <section id="guarantees" className="guarantees-section" style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} aria-label="AdSprint e-commerce guarantees and refund policy">
           <div className="container">
             <div className="section-header" style={{ textAlign: 'center' }}>
-              <p className="section-label reveal" style={{ textAlign: 'center' }}>// Our Promise</p>
+              <p className="section-label reveal" style={{ textAlign: 'center' }}>// Zero Risk</p>
               <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
-  Why SA Businesses Choose<br />
-  <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>AdSprint</em>
-</h2>
-<p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
-  Industry-leading guarantees that remove every reason not to try us — 
-  including a full refund plus R1,000 if you are not satisfied.
-</p>
-            
+                Why SA Online Stores<br />
+                <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>Trust AdSprint</em>
+              </h2>
+              <p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
+                You carry enough risk running an online store in South Africa. Your motion ads agency should not add to it.
+              </p>
             </div>
 
-           <div className="guarantee-grid">
-  {guarantees.map((g, i) => {
-    const Icon = g.icon
+            <div className="guarantee-grid">
+              {guarantees.map((g, i) => {
+                const Icon = g.icon
+                return (
+                  <div key={g.title} className={`guarantee-card reveal reveal-delay-${(i % 2) + 1}`}>
+                    <div className="guarantee-icon-wrap">
+                      <Icon size={28} strokeWidth={2.2} />
+                    </div>
+                    <h3>{g.title}</h3>
+                    <p>{g.desc}</p>
+                  </div>
+                )
+              })}
+            </div>
 
-    return (
-      <div
-        key={g.title}
-        className={`guarantee-card reveal reveal-delay-${(i % 2) + 1}`}
-      >
-        <div className="guarantee-icon-wrap">
-          <Icon size={28} strokeWidth={2.2} />
-        </div>
-
-        <h3>{g.title}</h3>
-        <p>{g.desc}</p>
-      </div>
-    )
-  })}
-</div>
-
-            <div className="guarantees-footer reveal" style={{ marginTop: '40px' }}>
+            <div className="guarantees-footer reveal" style={{ marginTop: 40 }}>
               <p>
                 "We're not asking you to trust us blindly.<br />
                 We're removing every reason not to try us."
@@ -664,52 +796,48 @@ className="video-showcase-inner"
         <section className="conf-section">
           <div className="container">
             <div className="conf-inner">
-              {/* Left — text */}
               <div>
                 <div className="conf-badge reveal">
                   <Lock size={16} strokeWidth={2.2} />
-<span>Client Confidentiality</span>
+                  <span>Your Ads Stay Yours</span>
                 </div>
                 <h2 className="section-title reveal reveal-delay-1">
-                  Your marketing<br />strategy stays <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>yours.</em>
+                  Your best product ad<br />is a <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>competitive advantage.</em>
                 </h2>
                 <p className="section-subtitle reveal reveal-delay-2" style={{ marginBottom: 0 }}>
-                  We've seen too many agencies treat client work as their own marketing currency. We do things differently.
+                  When an ad is converting at 4× ROAS, the last thing you want is your agency posting it for your competitors to copy. We default to complete confidentiality on everything.
                 </p>
 
                 <div className="conf-points">
                   {[
-                    { icon: ShieldCheck, title: 'Zero Sharing Without Permission', body: 'What we build for you is yours. We default to complete confidentiality and only share your work with your explicit written permission.' },
-                    { icon: Trophy, title: 'Your Ad Is a Competitive Advantage', body: 'Your best performing ad isn\'t just content — it\'s a strategic asset. We treat it that way, and protect it accordingly.' },
-                    { icon: FolderLock, title: 'Full Creative Ownership', body: 'You own 100% of every file, frame, and piece of creative we produce for you. No licensing, no strings, no surprises.' },
+                    { icon: ShieldCheck, title: 'Never Shared Without Your Permission', body: 'Your product ads, performance data, and brand strategy are never shared publicly or used in our own marketing without your explicit written consent.' },
+                    { icon: Trophy,      title: 'Your High-Performing Ad Is Protected', body: 'A 4× ROAS ad is not just content — it is a revenue asset. We treat it like one. Your best creative never appears in our portfolio without your say-so.' },
+                    { icon: FolderLock,  title: '100% Creative Ownership on Delivery', body: 'Full copyright is transferred to you the moment we deliver. No licences, no usage restrictions, no strings — the creative is yours forever.' },
                   ].map((pt, i) => {
-                        const Icon = pt.icon
-                    return(
-                    <div key={pt.title} className={`conf-point reveal reveal-delay-${i + 1}`}>
-                          <div className="conf-point-icon">
-          <Icon size={24} strokeWidth={2.1} />
-        </div>
-                      <div className="conf-point-body">
-                        <h4>{pt.title}</h4>
-                        <p>{pt.body}</p>
+                    const Icon = pt.icon
+                    return (
+                      <div key={pt.title} className={`conf-point reveal reveal-delay-${i + 1}`}>
+                        <div className="conf-point-icon"><Icon size={24} strokeWidth={2.1} /></div>
+                        <div className="conf-point-body">
+                          <h4>{pt.title}</h4>
+                          <p>{pt.body}</p>
+                        </div>
                       </div>
-                    </div>
-                  )})}
+                    )
+                  })}
                 </div>
               </div>
 
-              {/* Right — quote card */}
               <div className="reveal reveal-delay-2">
                 <div className="conf-quote-card">
                   <span className="conf-quote-mark">"</span>
                   <p className="conf-quote-text">
-                    We've seen too many agencies use client work as their own marketing currency — sharing strategies, results, and creative work without fully considering the competitive implications for their clients. What we build for you is yours. We default to complete confidentiality and only share your work with your explicit permission. Because we understand that your best performing ad isn't just content — it's a competitive advantage.
+                    We've seen too many agencies use client work as their own marketing currency — sharing strategies, results, and creative work without fully considering what that means for their clients' competitive position. An ad that converts at 4× ROAS in your product category is valuable intelligence. We protect it by default. What we build for your store is yours — and it stays that way.
                   </p>
                   <div className="conf-quote-footer">
-               
                     <div>
-              
-                      <span>AdSprint</span>
+                      <strong>Nhlamulo Mabunda</strong>
+                      <span>Founder & CEO, AdSprint</span>
                     </div>
                   </div>
                 </div>
@@ -719,20 +847,19 @@ className="video-showcase-inner"
         </section>
 
         {/* ════════════════════════════════════════
-            PRICING — LIQUID GLASS
+            PRICING
         ════════════════════════════════════════ */}
-        <section id="pricing" className="pricing-section" aria-label="Motion ads pricing plans for South African businesses">
+        <section id="pricing" className="pricing-section" aria-label="Motion ads pricing for South African e-commerce stores">
           <div className="container">
             <div className="section-header" style={{ textAlign: 'center' }}>
               <p className="section-label reveal" style={{ textAlign: 'center' }}>// Pricing</p>
-             <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
-  Motion Ads Pricing for<br />
-  <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>South African Businesses</em>
-</h2>
-<p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
-  Transparent monthly plans in ZAR — no hidden fees, no long-term contracts, 
-  cancel any time with 30 days notice.
-</p>
+              <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
+                Motion Ads Pricing for<br />
+                <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>SA Online Stores</em>
+              </h2>
+              <p className="section-subtitle reveal reveal-delay-2" style={{ textAlign: 'center', margin: '0 auto' }}>
+                Transparent monthly plans in ZAR. Includes production, ads management, and strategy — no hidden fees, cancel any time.
+              </p>
             </div>
 
             <div className="pricing-grid" ref={pricingRef}>
@@ -753,10 +880,59 @@ className="video-showcase-inner"
                       <li key={f}><Check />{f}</li>
                     ))}
                   </ul>
-                  <a href={`/checkout?plan=${plan.name}`} className={`pricing-cta ${plan.ctaClass}`} >
+                  <a href={`/checkout?plan=${plan.name}`} className={`pricing-cta ${plan.ctaClass}`}>
                     {plan.cta}
                     {plan.popular && <span style={{ fontSize: '0.8rem' }}>→</span>}
                   </a>
+                </div>
+              ))}
+            </div>
+
+            {/* Pricing footnote */}
+            <p style={{ textAlign: 'center', fontSize: '0.8rem', color: 'var(--text-tertiary)', fontWeight: 300, marginTop: 32 }}>
+              All plans include a personal CEO strategy call within 20 minutes of payment · Full refund + R1,000 if not satisfied · Cancel any time with 30 days notice
+            </p>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════
+            FAQ
+        ════════════════════════════════════════ */}
+        <section id="faq" className="section" style={{ paddingTop: 0 }} aria-label="Frequently asked questions about AdSprint e-commerce motion ads">
+          <div className="container" style={{ maxWidth: 720 }}>
+            <div className="section-header" style={{ textAlign: 'center' }}>
+              <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
+              <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
+                Frequently Asked Questions
+              </h2>
+              <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, marginTop: 8, marginBottom: 36 }}>
+                Everything SA online store owners ask before signing up with AdSprint
+              </p>
+            </div>
+          </div>
+
+          <div style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '0 clamp(16px, 5vw, 24px)', boxSizing: 'border-box' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {faqs.map((faq, i) => (
+                <div
+                  key={i}
+                  className={`feature-card reveal reveal-delay-${i % 3 + 1}`}
+                  style={{ cursor: 'pointer', padding: '24px 28px' }}
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
+                    <h3 style={{ fontSize: '1rem', fontFamily: 'Outfit,sans-serif', fontWeight: 500, letterSpacing: 0, margin: 0 }}>
+                      {faq.q}
+                    </h3>
+                    <span style={{ color: 'var(--green)', fontSize: '1.2rem', transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s', flexShrink: 0 }}>
+                      +
+                    </span>
+                  </div>
+                  {openFaq === i && (
+                    <p style={{ marginTop: 16, marginBottom: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65, animation: 'slideDown 0.25s ease' }}>
+                      {faq.a}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -764,105 +940,67 @@ className="video-showcase-inner"
         </section>
 
         {/* ════════════════════════════════════════
-            FAQ
+            CTA BANNER
         ════════════════════════════════════════ */}
-<section id="faq" className="section" style={{ paddingTop: 0 }} aria-label="Frequently asked questions about AdSprint South Africa">
-  <div className="container" style={{ maxWidth: 720 }}>
-    <div className="section-header" style={{ textAlign: 'center' }}>
-      <p className="section-label reveal" style={{ textAlign: 'center' }}>// FAQ</p>
-     <h2 className="section-title reveal reveal-delay-1" style={{ textAlign: 'center' }}>
-  Frequently Asked Questions
-</h2>
-<p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, marginTop: '8px', marginBottom: '36px' }}>
-  Everything South African businesses ask before signing up with AdSprint
-</p>
-    </div>
-  </div>
-
-  <div style={{
-    width: '100%',
-    maxWidth: 720,
-    margin: '0 auto',
-    padding: '0 clamp(16px, 5vw, 24px)',
-    boxSizing: 'border-box',
-  }}>
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-      {faqs.map((faq, i) => (
-        <div
-          key={i}
-          className={`feature-card reveal reveal-delay-${i % 3 + 1}`}
-          style={{ cursor: 'pointer', padding: '24px 28px' }}
-          onClick={() => setOpenFaq(openFaq === i ? null : i)}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-            <h3 style={{ fontSize: '1rem', fontFamily: 'Outfit,sans-serif', fontWeight: 500, letterSpacing: 0, margin: 0 }}>
-              {faq.q}
-            </h3>
-            <span style={{ color: 'var(--green)', fontSize: '1.2rem', transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s', flexShrink: 0 }}>
-              +
-            </span>
+        <section className="cta-section">
+          <div className="container">
+            <div className="cta-inner reveal">
+              <div className="cta-icon">🛒</div>
+              <h2 className="cta-title">
+                Your store deserves ads<br />that actually <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>sell.</em>
+              </h2>
+              <p className="cta-subtitle">
+                Pay today. CEO call in 20 minutes. First product ads live within 48 hours.
+              </p>
+              <div className="cta-actions">
+                <a href="/checkout" className="btn-primary-lg">
+                  Get My Store's Ads <Arrow />
+                </a>
+                <button className="btn-ghost" style={{ fontSize: '1rem', padding: '16px 28px' }} onClick={() => scrollTo('guarantees')}>
+                  See All Guarantees
+                </button>
+              </div>
+              <p style={{ marginTop: 24, fontSize: '0.8rem', color: 'var(--text-tertiary)', fontWeight: 300 }}>
+                Full refund + R1,000 if not satisfied · Cancel any time · 100% confidential
+              </p>
+            </div>
           </div>
-          {openFaq === i && (
-            <p style={{ marginTop: '16px', marginBottom: 0, fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 300, lineHeight: 1.65, animation: 'slideDown 0.25s ease' }}>
-              {faq.a}
-            </p>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-        {/* ════════════════════════════════════════
-            CTA
-        ════════════════════════════════════════ */}
+        </section>
       </main>
 
       {/* ─── FOOTER ─── */}
-    <footer>
-  <div className="container">
-    <div className="footer-inner">
-      <a
-        
-          href="#"
-          className="nav-logo"
-          style={{ fontSize: '1.2rem', textDecoration: 'none', display: 'inline-flex' }}
-          onClick={(e) => { e.preventDefault(); scrollTo('hero') }}
-        >
-          <div className="nav-logo-dot" />
-          AdSprint
-        </a>
-        <p className="footer-copy" style={{ marginTop: 8 }}>
-          © {new Date().getFullYear()} AdSprint — Motion Ads Agency, Johannesburg, South Africa.
-        </p>
-        <p className="footer-copy" style={{ marginTop: 4, fontSize: '0.72rem' }}>
-          A CodeSprint product under Mirthh (Pty) Ltd.
-        </p>
-        <address style={{
-          fontStyle: 'normal',
-          fontSize: '0.75rem',
-          color: 'var(--text-tertiary)',
-          fontWeight: 300,
-          marginTop: 10,
-          lineHeight: 1.7,
-        }}>
-          Johannesburg, Gauteng, South Africa<br />
-          <a href="tel:0633217882" style={{ color: 'var(--text-tertiary)', textDecoration: 'none' }}>
-            063 321 7882
-          </a>
-        </address>
-      
-      <div className="footer-links">
-        <a href="/#how-it-works">How It Works</a>
-        <a href="/#our-work">Our Work</a>
-        <a href="/#pricing">Pricing</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/privacypolicy">Privacy Policy</a>
-        <a href="/termsofservice">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-</footer>
+      <footer>
+        <div className="container">
+          <div className="footer-inner">
+            <div>
+              <a href="#" className="nav-logo" style={{ fontSize: '1.2rem', textDecoration: 'none', display: 'inline-flex' }} onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>
+                <div className="nav-logo-dot" />
+                AdSprint
+              </a>
+              <p className="footer-copy" style={{ marginTop: 8 }}>
+                © {new Date().getFullYear()} AdSprint — Motion Ads for SA E-Commerce, Johannesburg, South Africa.
+              </p>
+              <p className="footer-copy" style={{ marginTop: 4, fontSize: '0.72rem' }}>
+                A CodeSprint product under Mirthh (Pty) Ltd.
+              </p>
+              <address style={{ fontStyle: 'normal', fontSize: '0.75rem', color: 'var(--text-tertiary)', fontWeight: 300, marginTop: 10, lineHeight: 1.7 }}>
+                Johannesburg, Gauteng, South Africa<br />
+                <a href="tel:0633217882" style={{ color: 'var(--text-tertiary)', textDecoration: 'none' }}>063 321 7882</a>
+                {' · '}
+                <a href="mailto:hello@adsprint.co.za" style={{ color: 'var(--text-tertiary)', textDecoration: 'none' }}>hello@adsprint.co.za</a>
+              </address>
+            </div>
+            <div className="footer-links">
+              <a href="/#how-it-works">How It Works</a>
+              <a href="/#our-work">Our Work</a>
+              <a href="/#pricing">Pricing</a>
+              <a href="/#faq">FAQ</a>
+              <a href="/privacypolicy">Privacy Policy</a>
+              <a href="/termsofservice">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
