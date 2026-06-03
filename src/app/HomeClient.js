@@ -348,11 +348,7 @@ export default function HomeClient() {
           <div className="container">
             <div className="hero-inner">
               <div>
-                {/* Alert bar — Shein/Temu urgency hook */}
-                <div className="hero-badge reveal" style={{ background: 'rgba(255,60,60,0.08)', border: '1px solid rgba(255,60,60,0.2)', color: '#FF6B6B' }}>
-                  <div className="hero-badge-dot" style={{ background: '#FF6B6B', boxShadow: '0 0 8px #FF6B6B' }} />
-                  Shein & Temu now own 37% of SA online fashion
-                </div>
+                
 
                 <h1 className="hero-title reveal reveal-delay-1">
                   Your SA Online Store<br />
@@ -460,19 +456,7 @@ export default function HomeClient() {
           </div>
         </section>
 
-        {/* ════════════════════════════════════════
-            STATS
-        ════════════════════════════════════════ */}
-        <section className="stats-section">
-          <div className="container">
-            <div className="stats-grid">
-              <StatItem number="20"  suffix="+"       label="SA Online Stores Served" />
-              <StatItem number="42"  suffix="%"       label="Avg ROAS Lift With Video Ads" />
-              <StatItem number="48"  suffix="h"       label="First Ad Delivered" />
-              <StatItem number="130" suffix="B+ ZAR"  label="SA E-Commerce Market 2025" />
-            </div>
-          </div>
-        </section>
+      
 
         {/* ════════════════════════════════════════
             HOW IT WORKS
@@ -515,7 +499,7 @@ export default function HomeClient() {
                   className="twenty-min-badge"
                   style={{ marginBottom: 14 }}
                 >
-                  <span>⚡</span> Within 20 minutes of payment
+                  Within 20 minutes of payment
                 </div>
                 <div className="process-teams-wrap">
                   <Image src="/images/teams-meeting.webp" alt="CEO strategy call via Microsoft Teams — AdSprint motion ads for South African e-commerce" width={1200} height={800} style={{ width: '100%', height: 'auto', display: 'block' }} />
@@ -594,7 +578,6 @@ export default function HomeClient() {
             <div className="features-grid">
               {features.map((f, i) => (
                 <div key={f.title} className={`feature-card reveal reveal-delay-${i + 1}`}>
-                  <div className="feature-icon">{f.icon}</div>
                   <div className="process-teams-wrap">
                     <img src={f.preview} alt={`${f.title} for South African e-commerce brands — AdSprint`} style={{ width: '100%', height: 'auto', display: 'block' }} />
                   </div>
@@ -945,7 +928,7 @@ export default function HomeClient() {
         <section className="cta-section">
           <div className="container">
             <div className="cta-inner reveal">
-              <div className="cta-icon">🛒</div>
+    
               <h2 className="cta-title">
                 Your store deserves ads<br />that actually <em style={{ fontStyle: 'italic', color: 'var(--green)' }}>sell.</em>
               </h2>
